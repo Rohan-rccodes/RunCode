@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to accept a float value of number and return a rounded float value.          </h1>
+          <h2>Code:-</h2>
+          <pre><br> 
+            import java.util.*;
+            public class p139 {
+             public static void main(String[] args)
+                {
+                    Scanner in = new Scanner(System.in);
+                    System.out.print("Input a float number: ");
+                    float  x = in.nextFloat();  
+                    System.out.printf("The rounded value of %f is: %.2f",x, round_num(x));
+                    System.out.printf("\n");
+                }
+            
+                 public static float round_num(float fn)
+                {
+                    float f_num = (float)Math.floor(fn);
+                    float c_num = (float)Math.ceil(fn);
+                    if ((fn - f_num) > (c_num - fn))
+                        {
+                            return c_num;
+                            }
+                    else if ((c_num - fn) > (fn - f_num)) 
+                    {
+                        return f_num;
+                        }
+                    else 
+                    { 
+                       return c_num; 
+                       }		
+                }
+                
+                }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/139.PNG">
+</div>
+</section>

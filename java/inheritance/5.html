@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a subclass called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class BankAccount 
+            {
+            float bal=0;
+            
+            BankAccount(){}
+            BankAccount(float b)
+            {
+            bal=b;
+            }
+            
+            void deposit(int b)
+            {
+            
+            bal=bal+b;
+            System.out.println("Amount " +b+ " Successfully deposited\nCurrent balance = " +bal+ "\n");
+            }
+            
+            void withdraw(int b)
+            {
+            if (b>0 && b <=bal)
+            {
+            System.out.println("Collect your amount = " +b);
+            bal=bal-b;
+            System.out.println("Current balance = " +bal+ "\n");
+            }
+            else
+            {
+            System.out.println("Insufficient balance");
+            }
+            }
+            }
+                        
+            class SavingsAccount extends BankAccount
+            {           
+            SavingsAccount(float b)
+            {
+            bal=b;
+            }
+            void withdraw(int b)
+            {
+            if(bal< 100 && bal< b)
+            {
+            System.out.println("Insufficient balence");
+            } 
+            else
+            {
+            System.out.println("Collect your amount = " +b);
+            bal=bal-b;
+            System.out.println("Current balance = " +bal+ "\n");
+            }
+            }
+            
+            public static void main(String args[])
+            {
+            BankAccount obj1=new BankAccount(200);
+            obj1.deposit(100);
+            obj1.withdraw(300);
+            SavingsAccount obj2=new SavingsAccount(10);
+            obj2.withdraw(100);         
+            }           
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="5.png">
+</div>
+</section>

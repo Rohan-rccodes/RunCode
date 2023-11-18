@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../2Darray/2Darray.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Program to find the transpose of a given matrix</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a{
+                public static void main(String[] args) {
+                    int rows = 3, columns = 3;
+            
+                    // Initialize a matrix
+                    int[][] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+            
+                    // Create a matrix to store the transpose
+                    int[][] transpose = new int[columns][rows];
+            
+                    // Find the transpose of the matrix
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            transpose[j][i] = matrix[i][j];
+                        }
+                    }
+            
+                    // Display the original matrix
+                    System.out.println("Original Matrix:");
+                    displayMatrix(matrix);
+            
+                    // Display the transpose matrix
+                    System.out.println("\nTranspose of the Matrix:");
+                    displayMatrix(transpose);
+                }
+            
+                // Helper method to display a matrix
+                public static void displayMatrix(int[][] matrix) {
+                    for (int[] row : matrix) {
+                        for (int num : row) {
+                            System.out.print(num + " ");
+                        }
+                        System.out.println();
+                    }
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="10.PNG">
+</div>
+</section>

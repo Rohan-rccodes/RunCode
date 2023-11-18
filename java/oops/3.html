@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Rectangle {
+                private double width;
+                private double height;
+            
+                // Constructor to initialize width and height
+                public Rectangle(double width, double height) {
+                    this.width = width;
+                    this.height = height;
+                }
+            
+                // Method to calculate area of the rectangle
+                public double calculateArea() {
+                    return width * height;
+                }
+            
+                // Method to calculate perimeter of the rectangle
+                public double calculatePerimeter() {
+                    return 2 * (width + height);
+                }
+            
+                // Getter methods
+                public double getWidth() {
+                    return width;
+                }
+            
+                public double getHeight() {
+                    return height;
+                }
+            }
+            
+            public class RectangleExample {
+                public static void main(String[] args) {
+                    // Create an instance of the Rectangle class
+                    Rectangle rectangle = new Rectangle(5.0, 8.0);
+            
+                    // Print the details of the rectangle
+                    System.out.println("Rectangle Details:");
+                    System.out.println("Width: " + rectangle.getWidth());
+                    System.out.println("Height: " + rectangle.getHeight());
+            
+                    // Calculate and print the area and perimeter
+                    System.out.println("\nArea: " + rectangle.calculateArea());
+                    System.out.println("Perimeter: " + rectangle.calculatePerimeter());
+                }
+            }
+                
+          </pre>
+          <h2>Output:-</h2>
+          <img src="3.PNG">
+</div>
+</section>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>PACKAGES</h1>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A package is a database object that groups logically related PL/SQL objects, such as procedures, functions, variables, cursors, and type declarations into a single unit. There is considerable performance improvement because of this encapsulation. The entire package is loaded into the memory when a procedure or a function, within the package, is called for
+the first time. This reduces the unnecessary disk I/O and network traffic. <BR><BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PL/SQL package is like a library once written stored in the Oracle database and can be used by many applications. A package usually has two parts:</h3> </div>
+<div class="content">
+    <H3 style="color:yellow">1.PACKAGE SPECIFICATION:-</H3>
+    <H3>The package specification is required when you create a new package. The package specification lists all the objects which are publicly accessible from other applications. It declares the types, variables, constants, exceptions, cursors, and subprograms (procedure or function). The scope of these declarations is local to your database schema and global to the package. So, the declared objects are accessible from your application and from anywhere in the package.</H3>
+    </div>
+            <div class="image">
+                <img src="../output/26.PNG"/>
+            </div>
+            <div class="content">
+            <H3 style="color:yellow">Creating PL/SQL Package Specification:-</H3>
+        <H3>To create a package or package specification, use the CREATE PACKAGE stater which you can execute interactively from SQL*Plus.</H3>
+        </div>
+        <div class="syntax">
+            <h1>Syntax:-</h1>
+            </div>
+        <div class="box">
+            <p><b> CREATE [OR REPLACE] PACKAGE package_name [IS | AS]<br>                
+                procedure specification;<br>                
+                function_specification;<br>                
+                variable_declaration;<br>                
+                type_definition;<br>
+                exception declaration;<br>                
+                cursor declaration;<br>                
+                END [package_name];</b></p>
+        </div>
+        <div class="syntax">
+            <h1>Example:-</h1>
+            </div>
+            <div class="box">
+                <p><b>CREATE OR REPLACE PACKAGE pack AS<br>
+                    FUNCTION fun1 return number;<br>
+                  procedure pro1 ;<br>
+                  END pack;<br></b></p>
+            </div>
+            <div class="syntax">
+                <h1>output:-</h1>
+                </div>
+        <div class="image">
+            <img src="../output/26.1.PNG"/>
+        </div>
+        <div class="content">   
+        <H3 style="color:yellow">2.PACKAGE BODY:-</H3>
+    <H3>A package body contains the code that implements the package specification. It fully defines cursors, procedures and functions declared in the package specification. Unlike a package specification, the declarative part of a package body can contain subprogram bodies.</H3>
+    </div>
+    <div class="content">
+            <H3 style="color:yellow">Creating PL/SQL Package body:-</H3>
+        <H3>To create a package body, use the CREATE PACKAGE BODY statement, which you can execute interactively from SQL*Plus. Syntax of CREATE PACKAGE BODY statement is as follows:</H3>
+        </div>
+        <div class="syntax">
+            <h1>Syntax:-</h1>
+            </div>
+        <div class="box">
+            <p><b> CREATE [OR REPLACE] PACKAGE package_name [IS | AS]<br>                
+                procedure defination;<br>                
+                function_defination;<br>                
+                variable_declaration;<br>                
+                type_definition;<br>
+                [BEGIN<BR> 
+                    executable statements;]<br>
+                exception declaration;<br>                
+                cursor declaration;<br>                
+                END [package_name];</b></p>
+        </div>
+        <div class="syntax">
+            <h1>Example:-</h1>
+            </div>
+            <div class="box">
+                <p><b>CREATE OR REPLACE PACKAGE body pack AS<br>
+                    FUNCTION fun1 return number IS<br>
+                  begin<br>
+                      RETURN 1;<br>
+                  END;<br>
+                  procedure pro1 IS<br>
+                  begin<br>
+                      DBMS_OUTPUT.PUT_LINE('PROCEDURE');<br>
+                  end;<br>
+                  end pack;<br>
+                  </b></p>
+            </div>
+            </div>
+            <div class="syntax">
+                <h1>output:-</h1>
+                </div>
+        <div class="image">
+            <img src="../output/26.2.PNG"/>
+        </div>
+    
+    <div class="content">
+<H3 style="color:coral">DROPPING A PACKAGE:-</H3>
+<H3>To drop a packages ,DROP PACKAGES statement is used .In order to drop a packages,one must either own the packages or have DROP ANY PACKAGES system privilege.</H3>
+</div><div class="syntax">
+<h1>syntax:-</h1>
+</div>
+<div class="box">
+<p><B>DROP PACKAGES packages_name;
+</B></P></div>
+<div class="syntax">
+    <h1>Example:-</h1>
+    </div>
+    <div class="box">
+    <p><B>DROP packages pack;</B></P></div>
+    <div class="image">
+        <img src="../output/26.3.PNG"/>
+    </div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+    <div class="content">
+        <h1>SEQUENTIAL CONTROL</h1>
+        <h3>~By default, all PL/SQL blocks are executed in a top-down sequential process. The process begins with a BEGIN statement and terminates with an END statement. So, to change the sequence of execution of statements, you can use following unconditional statements:
+<br><br>(i) GOTO
+ <br><br>(ii) NULL</h3>
+ <h3 style="color: yellow;">(i) GOTO statement</h3>
+ <h3 style="padding-bottom: 10px;">&nbsp; &nbsp;The PL/SQL GOTO statement is a sequential control structure available in Oracle. The GOTO statement immediately transfers program control, (called "branching") unconditionally to a named statement label or block label. The statement or label name must be unique in the block.</h3>
+    </div>
+    <div class="syntax">
+        <h1>Syntax:-</h1>
+        </div>
+    <div class="box">
+        <p><b>GOTO << label_name >>;</b></p>
+    </div>
+    <div class="pic_text">
+        <h1>Example:-</h1>
+    </div>
+    <div class="box">
+        <p><b>begin<br>
+            dbms_output.put_line('This is first line');<br>
+            GOTO FOUR;<br>
+            dbms_output.put_line('This is Second line');<br>
+            dbms_output.put_line('This is Third line');<br>
+            << Four >><br>
+            dbms_output.put_line('This is Fourth line');<br>
+            end;</b></p>
+    </div>
+    <div class="pic_text">
+        <h1>Output:-</h1>
+    </div>
+    
+    <div class="image">
+        <img src="../output/20.PNG"/>
+    </div>
+    <div class="content">
+    <h3 style="color: yellow;">(ii) NULL statement</h3>
+ <h3 style="padding-bottom: 10px;">&nbsp; &nbsp;Generally when you write a statement in the program, you want it to do something but in some cases you want to tell PL/SQL to do nothing and in such cases, NULL statement can be used. The NULL statement does nothing other than pass control to the next statement.
+</div>
+    <div class="syntax">
+        <h1>Syntax:-</h1>
+        </div>
+    <div class="box">
+        <p><b>NULL ;</b></p>
+    </div>
+    <div class="pic_text">
+        <h1>Example:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            declare<br>
+            &nbsp; &nbsp;A number;<br>
+            begin<br>
+            &nbsp; &nbsp;A:=5;
+            &nbsp; &nbsp;if A mod 2!=0 then<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;dbms_output.put_line('NUMBER IS ODD');<br>
+            &nbsp; &nbsp;else<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;NULL;<br>
+            &nbsp; &nbsp;end if;<br>
+        end;</b></p>
+    </div>
+    <div class="pic_text">
+        <h1>Output:-</h1>
+    </div>
+    
+    <div class="image">
+        <img src="../output/20.1.PNG"/>
+    </div>
+    

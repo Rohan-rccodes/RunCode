@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class Bird with abstract methods fly() and makeSound(). Create subclasses Eagle and Hawk that extend the Bird class and implement the respective methods to describe how each bird flies and makes a sound.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            //Bird.java
+            abstract class Bird {
+              public abstract void fly();
+            
+              public abstract void makeSound();
+            }
+            //Eagle.java
+            class Eagle extends Bird {
+              @Override
+              public void fly() {
+                System.out.println("Eagle: Flying high in the sky.");
+              }
+            
+              @Override
+              public void makeSound() {
+                System.out.println("Eagle: Screech! Screech!");
+              }
+            }
+            //Hawk.java
+            class Hawk extends Bird {
+              @Override
+              public void fly() {
+                System.out.println("Hawk: Soaring through the air.");
+              }
+            
+              @Override
+              public void makeSound() {
+                System.out.println("Hawk: Caw! Caw!");
+              }
+            }
+            //Main.java
+            class Inheritance_25 {
+              public static void main(String[] args) {
+                Bird eagle = new Eagle();
+                Bird hawk = new Hawk();
+            
+                eagle.fly();
+                eagle.makeSound();
+            
+                hawk.fly();
+                hawk.makeSound();
+              }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="25.png">
+</div>
+</section>

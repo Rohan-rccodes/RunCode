@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../JDBC/JDBC.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Delete the row in the table in the database from Java API.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            //  Delete the row in the table in the database from Java API.
+
+            import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.sql.Statement;
+            import java.sql.SQLException;
+            import java.sql.ResultSet;
+            
+            class Main {
+                private static Connection con;
+                private static int rows_affected;
+            
+                public static void main(String[] args) {
+                    
+                    try{
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
+                        
+                        Statement st = con.createStatement(ResultSet.TYPE_FORWARD_ONLY,ResultSet.CONCUR_UPDATABLE);
+                        String sql = "DELETE FROM students";
+                        
+                        rows_affected = st.executeUpdate(sql);
+                        System.out.println("Numbers of rows deleted : "+rows_affected);
+                        
+                        //telling user that he is deleting from an empty table.
+                        ResultSet rs =  st.executeQuery("SELECT * FROM students");
+                        if(!rs.next())
+                        System.out.println("--------   Hey User, Your table is empty.  --------");
+                    }
+                    catch(ClassNotFoundException c)
+                    {
+                        c.printStackTrace();
+                    }
+                    catch(SQLException s)
+                    {
+                        s.printStackTrace();
+                    }
+            
+                    if(con!=null) {
+                        try {
+                            con.close();
+                        }
+                        catch(SQLException sql_e) {
+                            sql_e.printStackTrace();
+                        }
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="5.png">
+</div>
+</section>

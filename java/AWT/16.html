@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../AWT/AWT.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create a simple AWT application that displays a TextArea with FlowLayout manager.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.awt.*;
+            import java.awt.event.*;
+            
+            class textarea extends Frame {
+                private TextArea textArea;
+            
+                    textarea() {
+                    setTitle("TextArea with FlowLayout");
+                    setSize(400, 300);
+            
+                    setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); 
+            
+                    textArea = new TextArea(10, 30); 
+                    add(textArea);
+            
+                    addWindowListener(new WindowAdapter() {
+                        public void windowClosing(WindowEvent we) {
+                            System.exit(0);
+                        }
+                    });
+                }
+            
+                public static void main(String[] args) {
+                    textarea app = new textarea();
+                    app.setVisible(true);
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="16.png">
+</div>
+</section>

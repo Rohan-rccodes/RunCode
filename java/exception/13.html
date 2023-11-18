@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../exception/exception.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to show an example of nested try block.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            public class NestedTryExample {
+              public static void main(String[] args) {
+                  try {
+                      // Outer try block
+                      System.out.println("Outer try block starts.");
+          
+                      // Some code that may cause an exception
+                      int result = divideNumbers(10, 0);
+          
+                      // This line will not be executed if an exception occurs above
+                      System.out.println("Result: " + result);
+          
+                      // Inner try block
+                      try {
+                          System.out.println("Inner try block starts.");
+          
+                          // Some code that may cause another exception
+                          int[] array = new int[5];
+                          int value = array[10];
+          
+                          // This line will not be executed if an exception occurs above
+                          System.out.println("Value: " + value);
+          
+                          System.out.println("Inner try block ends.");
+                      } catch (ArrayIndexOutOfBoundsException innerException) {
+                          System.err.println("Inner Exception: " + innerException.getMessage());
+                      }
+          
+                      System.out.println("Outer try block ends.");
+                  } catch (ArithmeticException outerException) {
+                      System.err.println("Outer Exception: " + outerException.getMessage());
+                  }
+              }
+          
+              // A method that may throw an ArithmeticException
+              private static int divideNumbers(int numerator, int denominator) {
+                  return numerator / denominator;
+              }
+          }           
+          </pre>
+          <h2>Output:-</h2>
+          <img src="13.PNG">
+</div>
+</section>

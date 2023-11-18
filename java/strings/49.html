@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Create an object StringBuffer class to reverse the string.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.lang.StringBuffer;
+
+            public class strings7048_49 {
+            
+                public static void main(String[] args) {
+                    StringBuffer sb = new StringBuffer("Hello World!");
+                    System.out.println(reverse(sb));
+                }
+            
+                public static StringBuffer reverse(StringBuffer sb) {
+                    if (sb == null || sb.length() == 0) {
+                        return sb;
+                    }
+                    int start = 0;
+                    int end = sb.length() - 1;
+                    char temp;
+                    while (start < end) {
+                        temp = sb.charAt(start);
+                        sb.setCharAt(start, sb.charAt(end));
+                        sb.setCharAt(end, temp);
+                        start++;
+                        end--;
+                    }
+                    return sb;
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/49.png">
+</div>
+</section>

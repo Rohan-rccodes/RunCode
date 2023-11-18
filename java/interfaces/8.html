@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../interfaces/interfaces.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Playable interface
+            interface Playable {
+                void play();
+            }
+            
+            // Football class implementing Playable interface
+            class Football implements Playable {
+                @Override
+                public void play() {
+                    System.out.println("Playing Football");
+                    // Add code to simulate playing football here
+                }
+            }
+            
+            // Volleyball class implementing Playable interface
+            class Volleyball implements Playable {
+                @Override
+                public void play() {
+                    System.out.println("Playing Volleyball");
+                    // Add code to simulate playing volleyball here
+                }
+            }
+            
+            // Basketball class implementing Playable interface
+            class Basketball implements Playable {
+                @Override
+                public void play() {
+                    System.out.println("Playing Basketball");
+                    // Add code to simulate playing basketball here
+                }
+            }
+            
+            // Main class to demonstrate the usage
+            public class PlayingSports {
+                public static void main(String[] args) {
+                    // Creating objects of Football, Volleyball, and Basketball
+                    Football football = new Football();
+                    Volleyball volleyball = new Volleyball();
+                    Basketball basketball = new Basketball();
+            
+                    // Calling the play() method for each sport
+                    football.play();
+                    volleyball.play();
+                    basketball.play();
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="8.PNG">
+</div>
+</section>

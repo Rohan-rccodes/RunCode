@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>SIMPLE LOOP/BASIC LOOP</h1>
+<h3>~The simplest form of LOOP statement is the basic (or infinite) loop, which encloses a sequence of statements between the keywords LOOP and END LOOP. Each time the flow of execution reaches the END LOOP statement, 
+    control is returned to the corresponding  LOOP statement above it. A basic loop allows execution of its statement at least once, even if the condition is already met upon entering the loop. Without the EXIT statement, the loop would be infinite or endless.</h3>
+
+<h3 style="color:yellow;font-size:22px;">The EXIT statement</h3>
+<h3>~You can use the EXIT statement to terminate a loop.Control passes to the next statement after the END LOOP statement. You can issue EXIT either as an action within an IF statement or as a stand-alone statement within the loop. The EXIT statement must be placed inside a loop. You can also attach a WHEN clause to allow conditional termination of the loop. When the EXIT statement is encountered, the condition in the WHEN clause is evaluated. 
+    If the condition yields TRUE, the loop ends and control passes to the next statement after the loop. A basic loop can contain multiple EXIT statements.</h3>
+</div><div class="syntax">
+    <h1 style="padding-top: 15px;">Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b> LOOP<br>
+        statements;<br>
+        . . .<br>
+    EXIT [WHEN condition];<br>
+END LOOP;</b></p>
+    </div>
+    <div class="content">
+    <h1>Example:-</h1>
+    </div>
+    <div class="box">
+        <p><b>declare
+            &nbsp; &nbsp; &nbsp; A number;<br>
+            &nbsp; &nbsp; &nbsp; B number;<br>
+            &nbsp; &nbsp; &nbsp; C number;<br>
+      Begin<br>
+      &nbsp; &nbsp; &nbsp; B:=1;<br>
+      &nbsp; &nbsp; &nbsp; C:=1;<br>
+      &nbsp; &nbsp; &nbsp; A:=5;<br>
+      &nbsp; &nbsp; &nbsp; LOOP<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If C>a then<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;exit;<br>
+      &nbsp; &nbsp; &nbsp; Else<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B:=B*C;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; C:=C+1;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end if;<br>
+      &nbsp; &nbsp; &nbsp; end loop;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  dbms_output.put_line('FACTORIAL OF '||A|| ' IS: '||B);<br>
+      end; </b></p>
+    </div>
+    
+    <div class="pic_text">
+        <h1>Output:-</h1>
+    </div>
+    <div class="image">
+        <img src="../output/15.PNG"/>
+    </div>
+    <div class="content">
+    <h1 style="padding-top: 15px;">Example with 'EXIT WHEN statement',the above code can be written as:-</h1>
+    <div class="box">
+        <p><b>declare
+            &nbsp; &nbsp; &nbsp; A number;<br>
+            &nbsp; &nbsp; &nbsp; B number;<br>
+            &nbsp; &nbsp; &nbsp; C number;<br>
+      Begin<br>
+      &nbsp; &nbsp; &nbsp; B:=1;<br>
+      &nbsp; &nbsp; &nbsp; C:=1;<br>
+      &nbsp; &nbsp; &nbsp; A:=5;<br>
+      &nbsp; &nbsp; &nbsp; LOOP<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B:=B*C;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; C:=C+1;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EXIT WHEN C>A;<br>
+      &nbsp; &nbsp; &nbsp; end loop;<br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  dbms_output.put_line('FACTORIAL OF '||A|| ' IS: '||B);<br>
+      end; </b></p>
+      </div>
+      </div>
+    <div class="pic_text">
+        <h1>Output:-</h1>
+    </div>
+    <div class="image">
+        <img src="../output/15.1.PNG"/>
+    </div>

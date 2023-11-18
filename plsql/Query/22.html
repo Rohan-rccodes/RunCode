@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>CURSUR MANAGEMENT</h1>
+<h3>~Cursor is a private SQL work area that Oracle uses to execute SQL statements and store information. Whenever you issue a SQL statement,
+     the Oracle server opens an area of memory in which the command is parsed and executed. This area is called a cursor. This temporary work area is used to store the data retrieved from the database, and manipulate this data. A cursor can hold more than one row, but can process only one row at a time. The set of rows the cursor holds is called the Active Set.</h3>
+ <H3 style="color:yellow">TYPES OF CURSUR</H3> 
+ <h3>There are Two types of cursors in PL/SQL:-<br>
+    (1) Implicit Cursor <br>
+    (2) Explicit Cursor</h3>
+    <H3 style="color:yellow">1. IMPLICIT CURSUR</H3>
+    <H3>Implicit cursors are declared by PL/SQL implicitly when DML statements like, INSERT,UPDATE,DELETE statements are executed.They are also declared when a SELECT statement that returns just one row is executed.<br>
+        When the executable part of a PL/SQL block issues a SQL statement, PL/SQL creates an implicit cursor ,which PL/SQL manages automatically.</H3>
+        <H3 style="color:yellow">IMPLICIT CURSUR ATTRIBUTES:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle provides few attributes for implicit cursor called as implicit cursor attributes to check the status of DML operations.
+            <BR><BR>These attributes are:         
+            <BR>(i) %FOUND            
+           <BR> (ii) %NOTFOUND            
+            <BR>(iii) %ROWCOUNT            
+            <BR>(iv) %ISOPEN            
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When we execute INSERT, UPDATE, or DELETE statements the cursor attributes tell us whether any rows are affected and how many have been affected. When a SELECT... INTO statement is executed in a PL/SQL Block, implicit cursor attributes can be used to find out whether any row has been returned by the SELECT statement. PL/SQL returns an error when no data is selected. 
+            <BR>The status of the cursor for each of these attributes is defined in the below table:</H3>   
+    </H3>   
+    </div>
+    
+     <div class="image">
+        <img src="../output/22.PNG"/>
+    </div>
+    <div class="syntax">
+    <h1>Example:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            DECLARE<br>
+               sname student.name%type;<br>
+            BEGIN<br>
+            select name into sname from student where roll=1;<br>
+            IF SQL%FOUND THEN<br>
+            DBMS_OUTPUT.PUT_LINE(sname); <br>
+            ELSe <br>
+            DBMS_OUTPUT.PUT_LINE('Data not found');<br>
+            END IF;<br>
+            END;
+            </b></p>
+    </div>
+    <div class="pic_text">
+        <h1>Output:-</h1>
+    </div>
+    <div class="image">
+        <img src="../output/22.1.PNG"/>
+    </div>
+    
+    <div class="content">
+    <H3 style="color:yellow">2.EXPLICIT CURSUR</H3>
+     <H3>Explicit Cursors are declared explicitly by the user, along with other identifiers to be used in a PL/SQL block. These are also known as user-defined cursors, defined in the DECLARE section of the PL/SQL block. They must be declared when you are executing a SELECT statement that returns more than one row. Even though the 
+        cursor stores multiple records, only one record can be processed at a time, which is called as current row.</H3>
+         <H3 style="color:yellow">CURSOR MANIPULATION:-</H3>
+         <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cursor manipulation is done through the DECLARE, OPEN, FETCH and CLOSE statements. These statements are explained below:
+             <BR><BR><FONT COLOR="greenyellow">Declaring an Explicit Cursor:-</FONT> 
+            <br><br>While declaring a cursor, cursor name is given and also defines the structure of the query to be performed within it. The CURSOR statement is used to declare explicit cursor.        
+     </H3>   
+     </div>
+    <div class="syntax">
+     <h1>Syntax:-</h1>
+     </div>
+     <div class="box">
+         <p><b>
+            CURSOR < cursor_name > IS < select_statements >;</b></p>
+     </div>
+     
+     <div class="content">
+       <h3><FONT COLOR="greenyellow">Opening an Explicit Cursor:-</FONT> 
+            <br><br>Once the cursor is declared in the declaration section, we can access the cursor in the execution section of the PL/SQL program. The OPEN statement is used to open an explicit cursor
+        </H3>   
+     </div>
+    <div class="syntax">
+     <h1>Syntax:-</h1>
+     </div>
+     <div class="box">
+         <p><b>
+            OPEN < cursor_name >;</b></p>
+     </div>
+     <div class="content">
+        <h3><FONT COLOR="greenyellow">Retrieving Individual row/Fetching Data from the Explicit Cursor:-</FONT> 
+             <br><br>After the cursor is opened, the current row is loaded into variables. The current row is the row at which the cursor is currently pointing. The transfer of data into PL/SQL variables is done through FETCH statement.
+            </H3>   
+      </div>
+     <div class="syntax">
+      <h1>Syntax:-</h1>
+      </div>
+      <div class="box">
+          <p><b>
+             FETCH < cursor_name > into < variables ></variables>;</b></p>
+      </div>
+      <div class="content">
+        <h3><FONT COLOR="greenyellow">Closing an Explicit Cursor:-</FONT> 
+             <br><br>Close the cursor after completing the processing of the SELECT statement. This step allows the cursor to be reopened, if required. Therefore, you can establish an active set several times. The CLOSE statement is used to close an explicit cursor.</H3>   
+      </div>
+     <div class="syntax">
+      <h1>Syntax:-</h1>
+      </div>
+      <div class="box">
+          <p><b>
+             CLOSE < cursor_name > >;</b></p>
+      </div>
+      <div class="content">
+        <H3 style="color:yellow">EXPLICIT CURSUR ATTRIBUTES:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle provides some attributes known as Explicit Cursor Attributes to control the data processing while using cursors. We use these attributes to avoid errors while accessing cursors through OPEN, FETCH and CLOSE statements.
+<br><br>
+            These are the attributes available to check the status of an explicit cursor.        
+            <BR>(i) %FOUND            
+           <BR> (ii) %NOTFOUND            
+            <BR>(iii) %ROWCOUNT            
+            <BR>(iv) %ISOPEN            
+    </div>
+</div>
+<div class="image">
+    <img src="../output/22.5.PNG"/>
+</div>
+
+      </div>
+      <div class="pic_text">
+        <h1>Examples:-</h1>
+    </div>
+    <div class="box">
+        <p><b>declare<br>
+            cursor x is select roll, name from student ;<br>            
+            r student.roll%type;<br>            
+            s student.name%type;<br>
+            begin<br>            
+            open x;<br>
+            loop<br>            
+            fetch x into r,s;<br>   
+            exit when x%notfound;<br>
+            dbms_output.put_line(r || s);<br>
+            end loop;<br>
+            end;</b></p>
+    </div>
+    <div class="image">
+        <img src="../output/22.4.PNG"/>
+    </div>
+    <div class="content">
+        <H1>CURSORS FOR LOOP:-</H1>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Cursor FOR LOOP implicitly declares its loop index as a record of type %ROWTYPE, opens a cursor, repeatedly fetches rows of the values from the active set into 
+            fields in the record, and then closes the cursor when all rows have been processed or when the EXIT command is encountered.
+    </div>
+</div>
+      </div>
+      <div class="pic_text">
+        <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>FOR < INDEX > IN < CURSOR_NAME >  LOOP<BR>
+         < STATEMENTS >;</p>
+    </div>
+    <div class="content">
+        <H1>CURSORS WITH PARAMETERS:-</H1>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters allow values to be passed to a cursor when it is opened, and used within the query when it executes. Using parameters explicit cursor may be opened more than once in a block, returning a different active set each time.
+<BR>     Each formal parameter in the cursor declaration must have a corresponding actual parameter in the OPEN statement. Parameter data types are the same as those for scalar variables, but you do not give them sizes. The parameters are treated like PL/SQL variables within the cursor's query expression.</H3>
+    </div>
+</div>
+      </div>
+      <div class="pic_text">
+        <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>CURSOR CURSOR_NAME > <BR>
+            [(PARAMETERS_NAME DATATYPE,....)]<BR>
+                IS<BR>
+                    select_statements;</p>
+    </div>
+    <div class="pic_text">
+        <h1>Example</h1>:-</h1>
+    </div>
+    <div class="box">
+        <p><b>declare<br>
+            curson x(y number) is select from student where roll_no>=y;<br>
+             begin<br>            
+            for num in x(2)<br>            
+            loop<br>            
+            dbms_output.put_line(num. roll no);<br>            
+            end loop;<br>
+        end;</p>
+        </div>
+    <div class="image">
+        <img src="../output/22.6.PNG"/>
+    </div>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>EXCEPTION HANDLING</h1>
+<h3>~In PL/SQL, a warning or error condition is called an exception, which arises during program execution. Run-time errors or exceptions arise from design faults, coding mistakes, hardware failures, and many other sources. When an error occurs, an exception is raised, i.e. the normal execution stops and the control transfers to the exception handling part of the PL/SQL block.
+<BR><BR>
+    Exceptions are identifiers in PL/SQL which may be raised during the execution of a block to terminate its
+     main body of actions. A block will always terminate when an exception is raised, but you may specify an 'Exception Handler to perform final actions before the block terminates.</h3>
+ <H3 style="color:yellow">ADVANTAGES OF EXCEPTION HANDLING</H3> 
+ <h3>1.Without exception handling, every time a command is issued, a check must be made for execution errors. 
+    With exception handling, errors are handled conveniently without the need to code multiple checks.
+<BR><BR>
+ 2.Exception handling improves readability by isolating error handling routines.
+ <BR><BR>
+ 3.Exception handling improves reliability. One need not worry about checking for an error at every point it might 
+ occur. If a PL/SQL block contains an exception handler,and if an exception is ever raised in that block, the exception handler will handle the exception.
+</h3>
+    <H3 style="color:yellow">TYPE OF EXCEPTION</H3>
+    <H3>1. Predefined Exceptions 2. User-defined Exceptions</H3>
+    <H3 style="color:greenyellow">1. Predefined Exceptions:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predefined exceptions are internally defined by runtime system Predefined exceptions are raised implicitly whenever PL/SQL program violates an ORACLE rule or exceeds a system-dependent limit. Every Oracle error has a number, but exceptions must be handled by name. So, PL/SQL predefines some common ORACLE errors as exceptions.
+<BR><BR>
+            For example, if you try to divide a number by zero then PL/SQL raises an exception called ZERO DIVIDE and if SELECT can not find a record then PL/SQL raises exception NO DATA FOUND</H3>   
+    </H3>   
+    <H3 style="color:greenyellow">How to handle exceptions?:-</H3>
+    <h3>When PL/SQL raises a predefined exception, the program is aborted by displaying error message. But if program is to handle exception raised by PL/SQL then we have to use Exception handling part of the PL/SQL block
+<br><br>
+        Exception handling part is used to specify the statements to be executed when ant exception occurs. Control is transferred to exception handling part whenever an exception. occurs. After the exception handler is executed, control is transferred to next statement in the enclosing block.</h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            When < exceptions-identifier > then < action >;</p>
+    </div>
+    <div class="content">
+        <div class="content">
+            <H3 style="color:yellow">Some of the Predefined-Exceptions:-</H3>
+    </div>
+    <div class="image">
+        <img src="../output/23.PNG"/>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+        <div class="image">
+            <img src="../output/23.2.PNG"/>
+        </div>   
+    <div class="content">
+        <H3 style="color:greenyellow">2. User defined Exceptions:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In addition to the predefined exceptions, you can also define your own exceptions Unlike predefined exceptions, user-defined exceptions are declared and defined by the ser User-defined exceptions are declared in the declaration section of PL/SQL block with their type as EXCEPTION. They must be raised explicitly using the RA statement unlike pre defined exceptions that are raised implicitly
+        </H3>   
+    <H3 style="color:aqua">Steps to be followed to use User-defined Exceptions :-</H3>
+    <h3>(i)They should be explicitly declared in the Declaration section.<br>
+        (Declaring an Exception)<br><br>
+        (ii) They should be explicitly raised in the Execution section<br>     
+        (Raising an Exception)<br><br>
+        (iii) They should be handled by referencing the user-defined exception name in the Exception section.<br>
+        (Handling an Exception)
+    </h3>
+    <H3 style="color:aqua">{i}Declaring Exeptions</H3>
+    <h3>User-defined exceptions can be declared only in the declarative section of a PL/SQL block .</h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>IDENTIFIER EXCEPTIONS;</p>
+    </div>
+    <div class="content">
+        <H3 style="color:aqua">{ii}Raising an Exeptions</H3>
+    <h3>A user-defined exception is raised explicitly, by issuing the RAISE statement within the executable section of PL/SQL block </h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>RAISE exception-identifier;</p>
+    </div>
+    <div class="content">
+        <H3 style="color:aqua">{iii}Handling an Exeptions</H3>
+    <h3> Once a user-defined exception is raised in the executable section of PL/SQL block, then
+        it should be handled by referencing the user-defined exception name in the exception section </h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>Begin<br>
+            ...... <br>
+            . . . .<br>
+            EXCEPTION WHEN < EXCEPTION-IDENTIFIER >THEN<br> 
+             statement;</p>
+    </div>

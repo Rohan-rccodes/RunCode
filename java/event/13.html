@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Close the Frame using WindowAdapter Class</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import javax.swing.*;
+            import java.awt.*;
+            import java.awt.event.*;
+            class Window_Adapter extends WindowAdapter
+            {
+                static JFrame frame;
+                
+                public static void main(String args[])
+                {
+                  
+                    frame=new JFrame("Window Adapter Class");
+                    frame.setBackground(Color.white);
+                    frame.setSize(500,500);
+                  
+                    Window_Adapter obj=new Window_Adapter();
+                   
+                    frame.addWindowListener(obj);
+                    frame.setVisible(true);
+                }
+               
+                @Override
+                public void windowClosing(WindowEvent e)
+                {   
+                    System.out.println("Status of frame : Closing");
+                    windowClosed(e);
+                }
+               
+                @Override
+                public void windowClosed(WindowEvent e)
+                {
+                    frame.dispose();
+                }
+              
+                @Override
+                public void windowIconified(WindowEvent e)
+                {
+                    System.out.println("Status of frame : Iconified");
+                }
+                
+                @Override
+                public void windowDeiconified(WindowEvent e)
+                {
+                    System.out.println("Status of frame : Deiconfied");
+                }
+              
+                @Override
+                public void windowActivated(WindowEvent e)
+                {
+                    System.out.println("Status of frame : Activated");
+                }
+               
+                @Override
+                public void windowDeactivated(WindowEvent e)
+                {
+                    System.out.println("Status of frame : Deactivated");
+                }
+               
+                @Override
+                public void windowOpened(WindowEvent e)
+                {
+                    System.out.println("Status of frame : Opened");
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="13.png">
+</div>
+</section>

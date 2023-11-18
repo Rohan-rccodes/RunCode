@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+<style>
+    .hero{
+        height: calc(1000vh - 80px);
+    }
+</style>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>FUNCTIONS</h1>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There are three types of operators used in SQL, namely Comparison Operators, Logical Operators and Special Operators. These operators are used mainly in the WHERE clause, HAVING clause to filter the data to be selected.</h3>
+<h3><font color="yellow">Advantages of FUNCTIONS:-</font></h3>
+<h3>(i) Functions can be used to perform complex calculations on data.<br>
+    (ii) Functions can modify individual data items.<br>    
+    (iii) Functions can very easily manipulate output for group of rows.<br>    
+    (iv) Functions can manipulate character as well as numeric type of data.<br>
+    (v) Functions can alter date formats for display.</h3>
+    <h3><font color="yellow">Two types of FUNCTIONS:-</font></h3>   
+<h3><font color="PINK">
+    <a href="#cp1">(i) SINGLE-ROW FUNCTIONS</a><br>
+    <a href="#cp2">(ii) MULTIPLE-ROW FUNCTIONS.</a><br>
+</font><br><br></h3>
+<h3 id="cp1"><font color="yellow">(i) SINGLE-ROW FUNCTIONS:-</font></h3>
+  <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;These functions operate on single rows only and return one result per row. They accept one or more arguments and return one value for each row returned by the query. An argument can be a User-supplied constant, Variable value, Column name or an Expression. Single-Row functions can be used in SELECT, WHERE, and ORDER BY clauses</h3>
+</div>
+<div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>function_name [(arg1, arg2,...)]</b></p>
+    </div>
+    <div class="content">
+        <h3>Where, function_name is the name of the function. arg1, arg2 is any argument to be used by the function. This can be represented by a user-supplied constant value, variable value, column name or an expression.</h3>
+    </div>
+<div class="image">
+    <img src="../../sql/output/50.PNG"/>
+</div>
+<div class="content">                                                                                                 
+<h3 id="cp2"><font color="yellow">(1) CHARACTER function</font></h3>
+    <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Character or text functions are used to manipulate text strings. They accept string or character data as input and can return both character and numeric values.<br>
+        Character functions can be divided into the following:<br>        
+        (a) Case-manipulation functions<br>        
+        (b) Character-manipulation functions</h3>
+</div>
+<div class="image">
+    <img src="../../sql/output/50.2.PNG"/>
+</div>      
+<div class="syntax">
+    <h1>  ...................................................................................................</h1>
+    <h1>Example:-</h1>
+     </div>
+    
+<div class="image">
+    <img src="../../sql/output/50.3.PNG"/>
+</div>
+<!--   
+ -->
+ <div class="content">                                                                                                 
+    <h3 id="cp2"><font color="yellow">(2) DATE function</font></h3>
+        <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle database stores dates in an internal numeric format, representing the century. year, month, day, hours, minutes, and seconds. The default date display format is DD- MON-RR.
+    <BR>Date functions operate on Oracle dates. These are the functions that take values of DATE datatype as input and return values of DATE datatype as output, except for the MONTHS BETWEEN function, which returns a number as output.
+    <BR>Few date functions are as given below:
+    </div>
+    <div class="image">
+        <img src="../../sql/output/50.4.PNG"/>
+    </div>      
+    <div class="syntax">
+        <h1>  ...................................................................................................</h1>
+        <h1>Example:-</h1>
+         </div>
+        
+    <div class="image">
+        <img src="../../sql/output/50.5.PNG"/>
+    </div>
+<!--    -->
+<div class="content">
+<h3 id="cp1"><font color="yellow">(iI) MULTIPLE-ROW FUNCTIONS:-</font></h3>
+  <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Group functions operate on multiple rows or groups of rows and return one value for the entire group or table. Group functions are also called Aggregate functions, used to produce the summarized results. They operate on sets of rows and return results based on groups of rows. By default all rows in a table are treated as one group.<BR>
+    In SQL, Group functions can be categorized as:<BR>    
+    • COUNT()<BR>    
+    •SUM()<BR>    
+    • MAX()<BR>    
+    • MIN()<BR>    
+    • AVG()</h3>
+<div class="image">
+    <img src="../../sql/output/50.6.PNG"/>
+</div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../exception/exception.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to manage the driver with path, username and password, if not successful then throw an exception</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+class DatabaseManager {
+    public static void main(String[] args) throws ClassNotFoundException {
+//        Class.forName("com.mysql.jdbc.Driver");
+        String dbUrl = "jdbc:mysql://localhost:3306/codevengers";
+        String username = "root";
+        String password = "";
+
+        try {
+            Connection connection = new DatabaseManager().getConnection(dbUrl, username, password);
+            System.out.println("Connection successfull");
+            connection.close();
+        } catch (DatabaseConnectionException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+        }
+    }
+
+    Connection getConnection(String dbUrl, String username, String password) throws DatabaseConnectionException {
+        try {
+            return DriverManager.getConnection(dbUrl, username, password);
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException("Failed to connect to the database: " + e.getMessage());
+        }
+    }
+}
+
+class DatabaseConnectionException extends Exception {
+    public DatabaseConnectionException(String message) {
+        super(message);
+    }
+}
+          </pre>
+          <h2>Output:-</h2>
+          <img src="9.png">
+</div>
+</section>

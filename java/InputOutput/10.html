@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../InputOutput/InputOutput.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Get all characters from the file, count number of lines, words, characters and display on the screen</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.io.*; 
+            class prog10 { 
+                public static void main(String[] args) 
+                    throws IOException 
+                { 
+                    File file = new File("text.txt"); 
+                    FileInputStream fileInputStream = new FileInputStream(file); 
+                    InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream); 
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader); 
+            
+                    String line; 
+                    int wordCount = 0; 
+                    int characterCount = 0; 
+                    int paraCount = 0; 
+                    int whiteSpaceCount = 0; 
+                    int sentenceCount = 0; 
+            
+                    while ((line = bufferedReader.readLine()) != null) { 
+                        if (line.equals("")) { 
+                            paraCount += 1; 
+                        } 
+                        else { 
+                            characterCount += line.length(); 
+                            String words[] = line.split("\\s+"); 
+                            wordCount += words.length; 
+                            whiteSpaceCount += wordCount - 1; 
+                            String sentence[] = line.split("[!?.:]+"); 
+                            sentenceCount += sentence.length; 
+                        } 
+                    } 
+                    if (sentenceCount >= 1) { 
+                        paraCount++; 
+                    } 
+                    System.out.println("Total word count = "+ wordCount); 
+                    System.out.println("Total number of sentences = "+ sentenceCount); 
+                    System.out.println("Total number of characters = "+ characterCount); 
+                    System.out.println("Number of paragraphs = "+ paraCount); 
+                    System.out.println("Total number of whitespaces = "+ whiteSpaceCount); 
+                } 
+            }
+
+
+
+              <b style="color: blueviolet;">text.txt</b>
+              Hello World!
+              I am creating JAVA Website.          
+          </pre>
+          <h2>Output:-</h2>
+          <img src="10.PNG">
+</div>
+</section>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.ArrayList;
+
+            class Book {
+                private String title;
+                private String author;
+            
+                // Constructor to initialize title and author
+                public Book(String title, String author) {
+                    this.title = title;
+                    this.author = author;
+                }
+            
+                // Getter methods
+                public String getTitle() {
+                    return title;
+                }
+            
+                public String getAuthor() {
+                    return author;
+                }
+            }
+            
+            class Library {
+                private ArrayList books;
+            
+                // Constructor to initialize the collection of books
+                public Library() {
+                    this.books = new ArrayList<>();
+                }
+            
+                // Method to add a book to the library
+                public void addBook(Book book) {
+                    books.add(book);
+                    System.out.println("Book added to the library: " + book.getTitle());
+                }
+            
+                // Method to remove a book from the library
+                public void removeBook(Book book) {
+                    if (books.remove(book)) {
+                        System.out.println("Book removed from the library: " + book.getTitle());
+                    } else {
+                        System.out.println("Book not found in the library: " + book.getTitle());
+                    }
+                }
+            
+                // Method to display all books in the library
+                public void displayBooks() {
+                    if (books.isEmpty()) {
+                        System.out.println("The library is empty.");
+                    } else {
+                        System.out.println("Books in the library:");
+                        for (Book book : books) {
+                            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor());
+                        }
+                    }
+                }
+            }
+            
+            public class LibraryExample {
+                public static void main(String[] args) {
+                    // Create an instance of the Library class
+                    Library myLibrary = new Library();
+            
+                    // Create instances of the Book class
+                    Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+                    Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+            
+                    // Add books to the library
+                    myLibrary.addBook(book1);
+                    myLibrary.addBook(book2);
+            
+                    // Display books in the library
+                    myLibrary.displayBooks();
+            
+                    // Remove a book from the library
+                    myLibrary.removeBook(book1);
+            
+                    // Display updated library
+                    myLibrary.displayBooks();
+                }
+            }           
+          </pre>
+          <h2>Output:-</h2>
+          <img src="11.PNG">
+</div>
+</section>

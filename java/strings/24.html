@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Program to find the duplicate characters in a string</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.HashSet;
+            import java.util.Set;
+            class a {
+                public static void main(String[] args) {
+                    String str = "test";
+                    Set<Character> set = new HashSet<>();
+                    Set<Character> duplicateSet = new HashSet<>();
+            
+                    for (char c : str.toCharArray()) {
+                        if (set.contains(c)) {
+                            duplicateSet.add(c);
+                        } else {
+                            set.add(c);
+                        }
+                    }
+            
+                    if (duplicateSet.isEmpty()) {
+                        System.out.println("No duplicate characters found");
+                    } else {
+                        System.out.println("Duplicate characters found: " + duplicateSet);
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/24.PNG">
+</div>
+</section>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../JDBC/JDBC.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Update the row in the table in the database from Java API.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.sql.SQLException;
+            import java.sql.Statement;
+            
+            class DatabaseUpdateWithStatement {
+                public static void main(String[] args) {
+                    String url = "jdbc:mysql://localhost:3306/mydb";
+                    String username = "root";
+                    String password = "";
+            
+                    // SQL update statement
+                    String updateSql = "UPDATE users SET id = 2 WHERE id = 5";
+            
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password);
+                        Statement statement = connection.createStatement();
+                        int rowsAffected = statement.executeUpdate(updateSql);
+            
+                        if (rowsAffected > 0) {
+                            System.out.println("Row updated successfully.");
+                        } else {
+                            System.out.println("No rows updated.");
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="4.png">
+</div>
+</section>

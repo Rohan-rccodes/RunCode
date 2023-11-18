@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>                  <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to take three numbers from the user and print the greatest number.Java
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.*;
+            class p52
+            {
+            public static void main(String a[]) 
+            {
+                try{
+                        int n1,n2,n3;
+                        Scanner s=new Scanner(System.in);
+                        System.out.println("Enter First number: ");
+                        n1=s.nextInt();
+                        Scanner s1=new Scanner(System.in);
+                        System.out.println("Enter Second number: ");
+                        n2=s1.nextInt();
+                        Scanner s2=new Scanner(System.in);
+                        System.out.println("Enter Third number: ");
+                        n3=s2.nextInt();
+            
+                        if(n1>n2)
+                        {
+                            if(n1>n3)
+                            {
+                                System.out.println(n1+" is greatest number. ");
+                            }
+                            else
+                            {
+                                  System.out.println(n3+" is greatest number. ");
+                            }
+                        }
+                        else
+                        {
+                            if(n2>n3)
+                            {
+                                System.out.println(n2+" is greatest number. ");
+            
+                            }
+                            else
+                            {
+                                System.out.println(n3+" is greatest number. ");
+                            }
+                        }
+            
+                    }
+                catch(InputMismatchException e)
+                {
+                    System.out.println("Enter only Numbers....");
+                }
+            }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/52.PNG">
+</div>
+</section>

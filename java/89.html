@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to find the common elements between two arrays</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+             
+import java.util.*; 
+class a {
+   public static void main(String[] args) {
+      int[] array1 = {4, 2, 3, 1, 6};
+      int[] array2 = {6, 7, 9, 8, 4};
+      List<Integer> commonElements = new ArrayList<>();
+      for (int i = 0; i < array1.length; i++) {
+         for (int j = 0; j < array2.length; j++) {
+            if (array1[i] == array2[j]) {
+               commonElements.add(array1[i]);
+               break;
+            }
+         }
+      }
+      System.out.println("Common Elements: " + commonElements);
+   }
+}
+
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/89.PNG">
+</div>
+</section>

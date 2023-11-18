@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Person {
+                private String firstName;
+                private String lastName;
+            
+                public Person(String firstName, String lastName) 
+                {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+            
+                public String getFirstName() {
+                    return firstName;
+                }
+            
+                public String getLastName() {
+                    return lastName;
+                }
+            }
+            
+            class Employee extends Person {
+                private int employeeId;
+                private String jobTitle;
+            
+                public Employee(String firstName, String lastName, int employeeId, String jobTitle) 
+                {
+                    super(firstName, lastName);
+                    this.employeeId = employeeId;
+                    this.jobTitle = jobTitle;
+                }
+            
+                public int getEmployeeId() {
+                    return employeeId;
+                }
+            
+                
+                public String getLastName() {
+                    return super.getLastName() + " (" + jobTitle + ")";
+                }
+            }
+            
+            class PersonAndEmployeeExample {
+                public static void main(String[] args) {
+                    Person person = new Person("Bharat", "Bhatt");
+                    Employee employee = new Employee("Ravi", "Bhatt", 12345, "Software Engineer");
+            
+                    System.out.println("Person: " + person.getFirstName() + " " + person.getLastName());
+                    System.out.println("Employee: " + employee.getFirstName() + " " + employee.getLastName() + ", Employee ID: " + employee.getEmployeeId());
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="7.png">
+</div>
+</section>

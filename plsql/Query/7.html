@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+        <div class="content">
+<h1>Variable scope in PL/SQL?</h1>
+<h3>PL/SQL allows the nesting of blocks, i.e., each program block may contain another inner block.
+     If a variable is declared within an inner block, it is not accessible to the outer block. However, if a variable is declared and accessible to an outer block, it is also accessible to all nested inner blocks. There are two types of variable scope −</h3>
+<h3><font color="yellow">Local variables − </font>Variables declared in an inner block and not accessible to outer blocks.</h3>
+<h3><font color="yellow">Global variables −</font>Variables declared in the outermost block or a package.</h3>
+    </div>
+<div class="syntax">
+<h1 style="padding-top: 20px;">Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>DECLARE <br>
+        -- Global variables<br>  
+        num1 number := 95;  <br>
+        num2 number := 85;  <br>
+     BEGIN  <br>
+        dbms_output.put_line('Outer Variable num1: ' || num1); <br>
+        dbms_output.put_line('Outer Variable num2: ' || num2); <br>
+        DECLARE  <br>
+           -- Local variables <br>
+           num1 number := 195;  <br>
+           num2 number := 185;  <br>
+        BEGIN  <br>
+           dbms_output.put_line('Inner Variable num1: ' || num1); <br>
+           dbms_output.put_line('Inner Variable num2: ' || num2); <br>
+        END;  <br>
+     END; 
+     / </b></p>
+</div>
+<div class="pic_text">
+    <h1>Output:-</h1>
+</div>
+<div class="image">
+    <img src="../output/7.PNG"/>
+</div>

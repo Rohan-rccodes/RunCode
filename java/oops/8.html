@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class TrafficLight {
+                String color;
+                int durationInSeconds;
+               public TrafficLight(String initialColor, int initialDuration) {
+                   this.color = initialColor;
+                   this.durationInSeconds = initialDuration;
+               }
+           
+              public void changeColor(String newColor) {
+                   color = newColor;
+                   System.out.println("Traffic light color changed to " + color);
+               }
+           
+               public boolean isRed() {
+                   return color.equalsIgnoreCase("red");
+               }
+           
+               public boolean isGreen() {
+                   return color.equalsIgnoreCase("green");
+               }
+           
+               public int getDuration() {
+                   return durationInSeconds;
+               }
+           
+               public void setDuration(int newDuration) {
+                   durationInSeconds = newDuration;
+                   System.out.println("Traffic light duration set to " + durationInSeconds + " seconds");
+               }
+           }
+           
+            class M3 {
+               public static void main(String[] args) {
+                   TrafficLight trafficLight = new TrafficLight("red", 60);
+           
+                   System.out.println("Initial State:");
+                   displayTrafficLightInfo(trafficLight);
+           
+                   trafficLight.changeColor("green");
+                   displayTrafficLightInfo(trafficLight);
+           
+                   System.out.println("Is it red? " + trafficLight.isRed());
+           
+                   System.out.println("Is it green? " + trafficLight.isGreen());
+           
+                   trafficLight.setDuration(45);
+                   displayTrafficLightInfo(trafficLight);
+               }
+           
+               private static void displayTrafficLightInfo(TrafficLight trafficLight) {
+                   System.out.println("Current Color: " + trafficLight.color);
+                   System.out.println("Current Duration: " + trafficLight.getDuration() + " seconds");
+                   System.out.println();
+               }
+           }
+           
+          </pre>
+          <h2>Output:-</h2>
+          <img src="8.png">
+</div>
+</section>

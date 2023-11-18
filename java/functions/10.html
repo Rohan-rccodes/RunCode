@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../functions/functions.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a {
+                public static void main(String[] args) {
+                    int number =202892202;
+                    int count = countTwos(number);
+                    System.out.println("Number of 2s in the integer: " + count);
+                }
+            
+                public static int countTwos(int number) {
+                    int count = 0;
+                    String numberStr = String.valueOf(number);
+            
+                    for (int i = 0; i < numberStr.length(); i++) {
+                        if (numberStr.charAt(i) == '2') {
+                            count++;
+                        }
+                    }
+            
+                    return count;
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="10.PNG">
+</div>
+</section>

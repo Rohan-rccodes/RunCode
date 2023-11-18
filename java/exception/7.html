@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../exception/exception.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a method that takes a string as input and throws an exception if the string does not contain vowels</h1>
+          <h2>Code:-</h2>
+          <pre><br>           
+            import java.util.Scanner;
+
+            class vowelchecker
+            {
+            public static void main(String args[])
+            {
+            try
+            {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter a String : ");
+            String str = sc.nextLine();
+            checkForVowels(str);
+            System.out.println("String Contains Vowels.");
+            }
+            catch(NoVowelsException e)
+            {
+            System.out.println("Exception : "+e.getMessage());
+            }
+            }
+            static void checkForVowels(String input) throws NoVowelsException
+            {
+            if(!input.matches(".*[AEIOUaeiou].*"))
+            {
+            throw new NoVowelsException("The Input string does not contains any vowels.");
+            }
+            }
+            }
+            class NoVowelsException extends Exception
+            {
+            public NoVowelsException(String message)
+            {
+               super(message);
+            }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="7.png">
+</div>
+</section>

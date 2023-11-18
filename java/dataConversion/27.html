@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dataConversion/dataConversion.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>How to convert Hex to Decimal</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.Scanner;
+            class a
+            {
+               public static void main(String args[]) 
+               { 
+            
+                  System.out.println("\n How to convert Hex to Decimal.\n");
+                  Scanner sc=new Scanner(System.in);
+                  System.out.print(" Enter a Hex Value one  : ");
+                  String Hex1 = sc.nextLine();
+            
+                  System.out.print(" Enter a Hex Value two  : ");
+                  String Hex2 = sc.nextLine();
+            
+                  int dec1 = Integer.parseInt(Hex1, 16);
+                  int dec2 = Integer.parseInt(Hex2, 16);
+            
+                  System.out.println("\n Convert Hex To Decimal value  is : " + dec1);
+                  System.out.println(" Convert Hex To Decimal value is : " + dec2);
+               }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/27.png">
+</div>
+</section>

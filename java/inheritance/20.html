@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). Create subclasses Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Abstract class Shape3D
+            abstract class Shape3D {
+                // Abstract methods to calculate volume and surface area
+                public abstract double calculateVolume();
+                public abstract double calculateSurfaceArea();
+            }
+            
+            // Subclass Sphere extending Shape3D
+            class Sphere extends Shape3D {
+                private double radius;
+            
+                // Constructor for Sphere
+                public Sphere(double radius) {
+                    this.radius = radius;
+                }
+            
+                // Implementation of abstract method to calculate volume for Sphere
+                @Override
+                public double calculateVolume() {
+                    return (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+                }
+            
+                // Implementation of abstract method to calculate surface area for Sphere
+                @Override
+                public double calculateSurfaceArea() {
+                    return 4 * Math.PI * Math.pow(radius, 2);
+                }
+            }
+            
+            // Subclass Cube extending Shape3D
+            class Cube extends Shape3D {
+                private double side;
+            
+                // Constructor for Cube
+                public Cube(double side) {
+                    this.side = side;
+                }
+            
+                // Implementation of abstract method to calculate volume for Cube
+                @Override
+                public double calculateVolume() {
+                    return Math.pow(side, 3);
+                }
+            
+                // Implementation of abstract method to calculate surface area for Cube
+                @Override
+                public double calculateSurfaceArea() {
+                    return 6 * Math.pow(side, 2);
+                }
+            }
+            
+            // Main class for testing
+            public class Inheritance20_7070 {
+                public static void main(String[] args) {
+                    // Create instances of Sphere and Cube
+                    Sphere sphere = new Sphere(5.0);
+                    Cube cube = new Cube(3.0);
+            
+                    // Display volume and surface area for Sphere
+                    System.out.println("Sphere:");
+                    System.out.println("Volume: " + sphere.calculateVolume());
+                    System.out.println("Surface Area: " + sphere.calculateSurfaceArea());
+                    System.out.println();
+            
+                    // Display volume and surface area for Cube
+                    System.out.println("Cube:");
+                    System.out.println("Volume: " + cube.calculateVolume());
+                    System.out.println("Surface Area: " + cube.calculateSurfaceArea());
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="20.png">
+</div>
+</section>

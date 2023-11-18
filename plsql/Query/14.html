@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>PROCEDURE</h1>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A procedure or stored procedure is a named PL/SQL block that can accept parameters (sometimes referred to as arguments), and be invoked. Generally speaking, a procedure is mainly used to perform one or more specific task. A procedure has a header, a declaration section, an executable section, and an optional exception-handling section.
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;A procedure can be compiled and stored in the database as a schema object. Procedures promote reusability and maintainability. When validated, they can be used in any number of applications. If the requirements change, only the procedure needs to be updated.
+    <br><br>
+ </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            CREATE [OR REPLACE] PROCEDURE procedure_name<BR>
+[(parameter1 [mode1] datatype1,....)]<BR>
+IS/AS<BR>
+BEGIN<BR>
+pl/sql executable statements ;<BR>
+[ EXCEPTION <br>
+exception handling;]<BR>
+END [procedure_name]
+</b></p>    </div>
+        <div class="content">
+            <H3 style="color:yellow">TYPES OF PROCEDURE:-</H3>
+        <h3>1. Unnamed<br>
+        2. Named<br>
+    3. Stored.</h3>
+        </div>
+        <div class="content">
+            <H3 style="color:yellow">MODES OF PARAMETERS:-</H3>
+        <h3>1. IN(DEFAULT)<br>
+        2. OUT<br>
+    3. IN OUT</h3>
+    <H3 style="color:coral">1.IN MODE</H3>
+    <H3>An IN parameter lets you pass a value to the subprogram. It is a read-only parameter. Inside the subprogram, an IN parameter acts like a constant. It cannot be assigned a value. You can pass a constant, literal, initialized variable, or expression as an IN parameter. You can also initialize it to a default value; however, in that case, it is omitted from the subprogram call. It is the default mode of parameter passing. Parameters are passed by reference</H3>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+    <div class="box">
+        <p><b>DECLARE<br> 
+            PROCEDURE PRO1(Y  NUMBER) IS<br>
+            BEGIN<br>
+            DBMS_OUTPUT.PUT_LINE(Y);<br>
+            END;<br>
+            BEGIN<br>
+            PRO1(20);<br>
+            END;</p>
+    </div>
+    <div class="syntax">
+        <h1>output:-</h1>
+        </div>
+    <div class="image">
+        <img src="../output/14.PNG"/>
+    </div>
+    <div class="content">
+    <H3 style="color:coral">2.OUT MODE</H3>
+    <H3>An OUT parameter returns a value to the calling program. Inside the subprogram, an OUT parameter acts like a variable. You can change its value and reference the value after assigning it. The actual parameter must be variable and it is passed by value.</H3>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+    <div class="box">
+    <p><B>DECLARE <br>
+        NUM NUMBER;<br>
+       NUM_OUT NUMBER;<br>
+    PROCEDURE PRO1(X IN OUT NUMBER,Y OUT NUMBER) IS<br>
+    BEGIN<br>
+        Y:=X+15;<br>
+    END;<br>
+    BEGIN<br>
+        NUM:=10;<br>
+    PRO1(NUM,NUM_OUT);<br>
+    DBMS_OUTPUT.PUT_LINE(NUM_OUT);<br>
+    END;</B></p></div>
+    <div class="syntax">
+        <h1>output:-</h1>
+        </div>
+    <div class="image">
+        <img src="../output/14.1.PNG"/>
+    </div>
+    <div class="content">
+        <H3 style="color:coral">3. IN OUT MODE</H3>
+        <H3>An IN OUT parameter passes an initial value to a subprogram and returns an updated value to the caller. It can be assigned a value and the value can be read.
+
+            The actual parameter corresponding to an IN OUT formal parameter must be a variable, not a constant or an expression. Formal parameter must be assigned a value. Actual parameter is passed by value.</H3>
+        </div>
+        <div class="syntax">
+            <h1>Examples:-</h1>
+            </div>
+        <div class="box">
+        <p><B>DECLARE <BR>
+        NUM NUMBER;<BR>
+    PROCEDURE PRO1(X IN OUT NUMBER) IS<BR>
+    BEGIN<BR>
+        X:=X+15;<BR>
+    END;<BR>
+    BEGIN<BR>
+        NUM:=10;<BR>
+    PRO1(NUM);<BR>
+    DBMS_OUTPUT.PUT_LINE(NUM);<BR>
+    END;</B></P></div>
+    <div class="syntax">
+        <h1>output:-</h1>
+        </div>
+    <div class="image">
+        <img src="../output/14.2.PNG"/>
+    </div>
+    <div class="content">
+        <H3 style="color:yellow">CALLING AND DROPPING A PROCEDURE</H3>
+<H3 style="color:coral">1. CALLING A PROCEDURE:-</H3>
+<H3>A procedure is called as PL/SQL statement.A procedure can be called from any PL/SQL program by giving its name followed by the parameters</H3>
+</div><div class="syntax">
+    <h1>syntax:-</h1>
+    </div>
+<div class="box">
+<p><B>Begin<br>
+    pro1(10);<br>
+    end;<br>
+    /<br>
+    execute procedure_name;
+</B></P></div>
+<div class="content">
+<H3 style="color:coral">2. DROPPING A PROCEDURE:-</H3>
+<H3>To drop a procedure ,DROP PROCEDURE statement is used .In order tp drop a procedure,one must either own thw procedure or have DROP ANY PROCEDURE system privilege.</H3>
+</div><div class="syntax">
+<h1>syntax:-</h1>
+</div>
+<div class="box">
+<p><B>DROP PROCEDURE procedure_name;
+</B></P></div>
+<div class="syntax">
+    <h1>Example:-</h1>
+    </div>
+    <div class="box">
+    <p><B>DROP procedure pro1;
+    </B></P></div>

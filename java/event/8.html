@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Create Check Boxes and Radio Buttons</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import javax.swing.*;
+            import java.awt.*;
+            import java.awt.event.*;
+            class Button_Checkbox implements ActionListener,ItemListener
+            {
+                static JFrame frame;
+                static JLabel text1,text2;
+                static JCheckBox[] checkbox;
+                static JRadioButton[] button;
+                
+                public static void main(String args[])
+                {
+                  
+                frame=new JFrame("Buttons & Checkboxes");
+                frame.setSize(600,600);
+                frame.setLayout(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.getContentPane().setBackground(Color.white);
+                
+                text1=new JLabel("");
+                text1.setBounds(0,450,600,50);
+                frame.add(text1);
+                text2=new JLabel("");
+                text2.setBounds(0,500,600,50);
+                frame.add(text2);
+                
+                Button_Checkbox obj=new Button_Checkbox();
+                
+                button=new JRadioButton[3];
+                for(int i=0;i < 3;i++)
+                {
+                    button[i]=new JRadioButton("Button "+(i+1));
+                    button[i].setBounds(200,i*80,100,50);
+                    frame.add(button[i]);
+                    button[i].addActionListener(obj);
+                }
+                
+                checkbox=new JCheckBox[3];
+                for(int i=0;i < 3;i++)
+                {
+                    checkbox[i]=new JCheckBox("Checkbox"+(i+1));
+                    checkbox[i].setBounds(220,(240)+i*80,100,50);
+                    frame.add(checkbox[i]);
+                    checkbox[i].addItemListener(obj);
+                }
+                
+                frame.setVisible(true);
+                }
+               
+                public void actionPerformed(ActionEvent e)
+                {
+                    String s = " ";
+                for(int i = 0 ;i < 3;i++)
+                {
+                    if(button[i].isSelected())
+                        s= s + " " + button[i].getText();
+                }
+                text1.setText( " Button(s) Selected : " + " " + s);
+                }
+               
+                public void itemStateChanged(ItemEvent e)
+                {
+                    String s = " ";
+                for(int i= 0 ;i < 3 ;i++)
+                {	
+                    if(checkbox[i].isSelected())
+                        s= s + " " + checkbox[i].getText();				
+                }
+                text2.setText( " Checkbox(s) Selected : " +  s );	
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="8.png">
+</div>
+</section>

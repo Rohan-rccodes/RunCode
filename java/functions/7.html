@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../functions/functions.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Write a Java method to check whether a string is a valid password.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a{
+
+                static String validatingPassword(String s) {
+                    int cap = 0, smLetter = 0, digit = 0;
+            
+                    int len = 0;
+            
+                    for (int i = 0; i < s.length(); i++) {
+            
+                        len++;
+            
+                        char c = s.charAt(i);
+            
+                        if (c > 46 && c < 58) {
+                            digit++;
+                        }
+            
+                        if (c > 64 && c < 91) {
+                            cap++;
+                        }
+            
+                        if (c > 96 && c < 123) {
+                            smLetter++;
+                        }
+            
+                    }
+                    String result = "";
+                    if (cap < 2) {
+                        result += "Password should contain at least  two capital letters.";
+                    }
+            
+                    if (digit < 2) {
+                        result += "\nPassword should contain at least 1 digit ...";
+                    }
+            
+                    if (len < 8) {
+                        result += "\nPassword should be minimum 8 characters";
+                    }
+            
+                    if (cap >= 2 && digit >= 2 && len >= 8) {
+                       result+="Password is valid...";
+                    }
+            
+                    else{
+                        result+="\nPassword is not valid...";
+                    }
+            
+                    return result;
+                }
+            
+                public static void main(String[] args) {
+                    String s = "HHellolodev45";
+            
+                    System.out.println(validatingPassword(s));
+            
+                }
+            
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="7.PNG">
+</div>
+</section>

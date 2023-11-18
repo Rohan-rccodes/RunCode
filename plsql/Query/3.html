@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>PL/SQL block</h1>
+<h3 style="word-spacing: 5px;">
+<h3> ~PL/SQL, the code is not executed in single line format, but it is always executed by grouping the code into a single element called Blocks. In this tutorial, you are going to learn about these blocks.</h3>
+<h3>~Blocks contain both PL/SQL as well as SQL instruction. All these instruction will be executed as a whole rather than executing a single instruction at a time.</h3> 
+    <h1 style="padding-bottom: 25px;padding-top: 25px;">Block Structure</h1> 
+<h3>PL/SQL blocks have a pre-defined structure in which the code is to be grouped. Below are different sections of PL/SQL blocks.</h3>
+<h3 style="color:yellow">1.Declaration section</h3>
+<h3 style="color:yellow">2.Execution section</h3>
+<h3 style="color:yellow">3.Exception-Handling section</h3>
+<h3>The below picture illustrates the different PL/SQL block and their section order.</h3>
+    <div class="image">
+        <img src="../output/3.PNG" style="margin-left: 340PX;"/>
+    </div>
+   <h1 style="padding-bottom: 25px;padding-top: 25px;">Declaration Section</h1> 
+   <h3>This is the first section of the PL/SQL blocks. This section is an optional part. 
+    This is the section in which the declaration of variables, cursors, exceptions, subprograms, pragma instructions and collections that are 
+    needed in the block will be declared. Below are few more characteristics of this part.</h3>
+   <h3>~This particular section is optional and can be skipped if no declarations are needed.
+   <br>~This should be the first section in a PL/SQL block, if present.
+   <br>~This section starts with the keyword ‘DECLARE’ for triggers and anonymous block. For other subprograms, this keyword will not be present. Instead, the part after the subprogram name definition marks the declaration section.
+   <br>~This section should always be followed by execution section.
+   <h1 style="padding-bottom: 25px;padding-top: 25px;">Execution Section</h1> 
+   <h3>Execution part is the main and mandatory part which actually executes the code that is written inside it. Since the PL/SQL expects the executable statements from this block this cannot be an empty block, i.e.,
+     it should have at least one valid executable code line in it. Below are few more characteristics of this part.</h3>
+   <h3>~This can contain both PL/SQL code and SQL code.
+   <br>~This can contain one or many blocks inside it as a nested block.
+   <br>~This section starts with the keyword ‘BEGIN’.
+   <br>~This section should be followed either by ‘END’ or Exception-Handling section (if present)</h3>
+   <h1 style="padding-bottom: 25px;padding-top: 25px;">Exception-Handling Section:</h1> 
+   <h3>The exception is unavoidable in the program which occurs at run-time and to handle this Oracle has provided an Exception-handling section in blocks.
+     This section can also contain PL/SQL statements. This is an optional section of the PL/SQL blocks.</h3>
+   <h3>~This is the section where the exception raised in the execution block is handled.
+    ~This section is the last part of the PL/SQL block.<br>
+    ~Control from this section can never return to the execution block.<br>
+    ~This section starts with the keyword ‘EXCEPTION’.<br>
+    ~This section should always be followed by the keyword ‘END’.</h3>
+<div class="pic_text">
+    <h1>PL/SQL Block Syntax</h1>
+</div>
+<div class="image">
+    <img src="../output/3.1.PNG" style="margin-left: 340PX;"/>
+</div>

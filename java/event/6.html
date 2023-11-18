@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Handle MouseEvent</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.awt.*;
+            import java.awt.event.*;
+            
+            class pro6 extends Frame implements MouseListener{
+            Button b1,b2;
+            
+            pro6(){
+            b1= new Button("ok");
+            b2= new Button("cancel");
+            setLayout(new FlowLayout());
+            add(b1); add(b2);
+            
+            b1.addMouseListener(this);
+            
+            b2.addMouseListener(this);
+            setSize(500,400);
+            setVisible(true);
+            }
+            
+            public static void main(String s[]){
+            new pro6();
+            }
+            
+            public  void mouseClicked(java.awt.event.MouseEvent me){System.out.println("button clicked");}
+            public  void mousePressed(java.awt.event.MouseEvent me){System.out.println("button pressed");}
+            public  void mouseReleased(java.awt.event.MouseEvent me){System.out.println("button released");}
+            public  void mouseEntered(java.awt.event.MouseEvent me){System.out.println("button eneterd");}
+            public  void mouseExited(java.awt.event.MouseEvent me){System.out.println("button exited");}
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="6.png">
+</div>
+</section>

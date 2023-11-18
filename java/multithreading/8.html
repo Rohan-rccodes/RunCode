@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../multithreading/multithreading.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create the program to create multiple threads by using Runnbale interface</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class prog8 {
+                /*
+                 * Topic = Multithread
+                 * prog.no 8 Create the program to create multiple threads by using Runnbale
+                 * interface
+                 */
+                public static void main(String[] args) throws java.lang.ClassNotFoundException {
+            
+                    Runnable r1 = new MyRun("This is Thread 1");
+                    Runnable r2 = new MyRun("This isThread 2");
+                    Runnable r3 = new MyRun("This isThread 3");
+            
+                    Thread t1 = new Thread(r1);
+                    Thread t2 = new Thread(r2);
+                    Thread t3 = new Thread(r3);
+            
+                    t1.start();
+                    t2.start();
+                    t3.start();
+                }
+            
+                @Override
+                public String toString() {
+                    return "prog1 []";
+                }
+            }
+            
+            class MyRun implements Runnable {
+                private String tn;
+            
+                public MyRun(String name) {
+                    this.tn = name;
+                }
+            
+                @Override
+                public void run() {
+                    for (int i = 1; i <= 5; i++) {
+                        System.out.println(tn + " - Count is start: " + i);
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    System.out.println(tn + " now running  has finished.");
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="8.png">
+</div>
+</section>

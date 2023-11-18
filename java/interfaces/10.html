@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../interfaces/interfaces.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Encryptable interface
+            interface Encryptable {
+                String encrypt(String data);
+                String decrypt(String encryptedData);
+            }
+            
+            // AES class implementing Encryptable interface
+            class AES implements Encryptable {
+                @Override
+                public String encrypt(String data) {
+                    // Add AES encryption logic here
+                    System.out.println("AES Encryption: " + data);
+                    return "AES-Encrypted-Data"; // Placeholder for actual encrypted data
+                }
+            
+                @Override
+                public String decrypt(String encryptedData) {
+                    // Add AES decryption logic here
+                    System.out.println("AES Decryption: " + encryptedData);
+                    return "Decrypted-Data"; // Placeholder for actual decrypted data
+                }
+            }
+            
+            // RSA class implementing Encryptable interface
+            class RSA implements Encryptable {
+                @Override
+                public String encrypt(String data) {
+                    // Add RSA encryption logic here
+                    System.out.println("RSA Encryption: " + data);
+                    return "RSA-Encrypted-Data"; // Placeholder for actual encrypted data
+                }
+            
+                @Override
+                public String decrypt(String encryptedData) {
+                    // Add RSA decryption logic here
+                    System.out.println("RSA Decryption: " + encryptedData);
+                    return "Decrypted-Data"; // Placeholder for actual decrypted data
+                }
+            }
+            
+            // Main class to demonstrate the usage
+            public class EncryptionExample {
+                public static void main(String[] args) {
+                    // Creating objects of AES and RSA
+                    Encryptable aesEncryptor = new AES();
+                    Encryptable rsaEncryptor = new RSA();
+            
+                    // Encrypting and Decrypting using AES
+                    String dataToEncrypt = "SensitiveData";
+                    String aesEncryptedData = aesEncryptor.encrypt(dataToEncrypt);
+                    String aesDecryptedData = aesEncryptor.decrypt(aesEncryptedData);
+            
+                    // Encrypting and Decrypting using RSA
+                    String rsaEncryptedData = rsaEncryptor.encrypt(dataToEncrypt);
+                    String rsaDecryptedData = rsaEncryptor.decrypt(rsaEncryptedData);
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="10.PNG">
+</div>
+</section>

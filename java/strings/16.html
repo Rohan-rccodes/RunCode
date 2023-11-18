@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Program to count the total number of vowels and consonants in a string</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class CountCheck {    
+                public static void main(String[] args) {    
+                        
+                    
+                    int vCount = 0, cCount = 0;    
+                        
+                   
+                    String str = "This is a really simple sentence";    
+                        
+                  
+                    str = str.toLowerCase();    
+                        
+                    for(int i = 0; i < str.length(); i++) {    
+                     
+                        if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {    
+                    
+                            vCount++;    
+                        }    
+                       
+                        else if(str.charAt(i) >= 'a' && str.charAt(i)<='z') {      
+                        
+                            cCount++;    
+                        }    
+                    }    
+                    System.out.println("Number of vowels: " + vCount);    
+                    System.out.println("Number of consonants: " + cCount);    
+                }    
+            }   
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/16.PNG">
+</div>
+</section>

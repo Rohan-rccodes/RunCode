@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../exception/exception.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program that reads a list of integers from the user and throws an exception if any numbers are duplicates</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            class exception6{
+                static class MyException extends Exception{
+                    MyException(String msg){
+                        super(msg);
+                    }
+                }
+            
+                public static void main(String arg[]) throws java.io.IOException, exception6.MyException{
+                    java.io.BufferedReader input = new java.io.BufferedReader (new java.io.InputStreamReader(System.in));
+                    // declare hashmap
+                    java.util.HashMap<Integer, Boolean> map = new java.util.HashMap<Integer, Boolean>();
+            
+                    try{
+                        System.out.print("Enter non repeating numbers : ");
+                        String[] list = input.readLine().split(" ");
+                        
+                        for(String st : list){
+                            int num = Integer.parseInt(st);
+                            if(map.containsKey(num)){
+                                String err = num + " is repeated in the list";
+                                throw new exception6.MyException(err);
+                            } else {
+                                map.put(num, true);
+                            }
+                        }
+                        
+                    } catch(java.lang.NumberFormatException e){
+                        System.out.println("Invalid input. Please enter a valid number.");
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="6.png">
+</div>
+</section>

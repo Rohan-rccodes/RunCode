@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>CONDITIONAL CONTROLS</h1>
+<h3>~The structure of the PL/SQL IF statement is similar to the structure of IF statements in other procedural
+    languages.It allows PL/SQL to perform actions selectively based on conditons.<br>
+    ~There are three forms of IF statements:<br>
+<font color="yellow">(i) IF-THEN-END IF<br>
+                    (ii) IF-THEN-ELSE-END IF<br>
+                    (iii) IF-THEN-ELSIF-END IF</font>
+<h1>(i) IF-THEN-END IF</h1>
+<h3>Syntax:-</h3>
+<div class="box">
+    <p><b>IF conditions THEN <br>
+        &nbsp; &nbsp; &nbsp; statements;<br>
+        END IF;</b></p>
+        </div>  
+    <h3>Example:-</h3>
+<div class="box">
+    <p><b>declare<br>
+        &nbsp; &nbsp; &nbsp; A number;<br>
+        &nbsp; &nbsp; &nbsp; B number;<br>
+        Begin<br>
+        &nbsp; &nbsp; &nbsp; A:=10;<br>
+        &nbsp; &nbsp; &nbsp; B:=5;<br>
+        &nbsp; &nbsp; &nbsp; If A>B then <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;dbms_output.put_line('A is bigger than B');<br>
+        &nbsp; &nbsp; &nbsp; end if;<br>
+        end;</b></p>
+        </div> 
+        <h3>Output:-</h3> 
+        <div class="image">
+            <img src="../output/10.PNG"/>
+        </div>
+    <h1>(ii) IF-THEN-ELSE-END IF</h1>
+    <h3>Syntax:-</h3>
+<div class="box">
+    <p><b>IF conditions THEN <br>
+        &nbsp; &nbsp; &nbsp; statements;<br>
+        ELSE<br>
+        &nbsp; &nbsp; &nbsp; statements;<br>
+        END IF;</b></p>
+        </div>  
+    <h3>Example:-</h3>
+<div class="box">
+    <p><b>declare<br>
+        &nbsp; &nbsp; &nbsp; A number;<br>
+        &nbsp; &nbsp; &nbsp; B number;<br>
+        Begin<br>
+        &nbsp; &nbsp; &nbsp; A:=22;<br>
+        &nbsp; &nbsp; &nbsp; B:=33;<br>
+        &nbsp; &nbsp; &nbsp; If A>B then <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;dbms_output.put_line('A is bigger than B');<br>
+        &nbsp; &nbsp; &nbsp; ELSE<br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;dbms_output.put_line('B is bigger than A');<br>
+        &nbsp; &nbsp; &nbsp; end if;<br>
+        end;</b></p>
+        </div> 
+        <h3>Output:-</h3> 
+        <div class="image">
+            <img src="../output/10.1.PNG"/>
+        </div>
+
+<h1>(iii) IF-THEN-ELSIF-END IF</h1>  
+<h3>Syntax:-</h3>
+<div class="box">
+    <p><b>IF conditions THEN <br>
+        &nbsp; &nbsp; &nbsp; statements;<br>
+        [ELSIF conditions THEN<br>
+        &nbsp; &nbsp; &nbsp; statements;]<br>
+        [ELSE<br>
+        &nbsp; &nbsp; &nbsp; statements;]<br>
+        END IF;</b></p>
+        </div>
+    <h3>Example:-</h3>
+<div class="box">
+    <p><b>declare<br>
+        &nbsp; &nbsp; &nbsp; A number;<br>
+        &nbsp; &nbsp; &nbsp; B number;<br>
+        &nbsp; &nbsp; &nbsp; C number;<br>
+        Begin<br>
+        &nbsp; &nbsp; &nbsp; A:=10;<br>
+        &nbsp; &nbsp; &nbsp; B:=20;<br>
+        &nbsp; &nbsp; &nbsp; C:=30;<br>
+        &nbsp; &nbsp; &nbsp; If A>B then <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If A>C then <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; dbms_output.put_line(A||' is biggest');<br>
+        &nbsp; &nbsp; &nbsp; ELSE <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; dbms_output.put_line(C||' is biggest');<br>
+        &nbsp; &nbsp; &nbsp; end if; <br>
+        &nbsp; &nbsp; &nbsp; ELSIF B>C THEN <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; dbms_output.put_line(B||' is biggest');<br>
+        &nbsp; &nbsp; &nbsp; ELSE<br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; dbms_output.put_line(C||' is biggest');<br>
+        &nbsp; &nbsp; &nbsp; end if;<br>
+        end;</b></p>
+        </div> 
+        <h3>Output:-</h3> 
+        <div class="image">
+            <img src="../output/10.2.PNG"/>
+        </div>
+
+</div>

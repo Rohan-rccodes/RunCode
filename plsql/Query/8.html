@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+        <div class="content">
+<h1>How can we fetch the data from table and store it into variable?</h1>
+<h3>PL/SQL <font color="yellow">SELECT INTO</font> statement is the simplest and fastest way to fetch a single row from a table into variables. The following illustrates the syntax of the PL/SQL <font color="yellow">SELECT INTO </font>statement:</h3>
+    </div>
+<div class="syntax">
+<h1>Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>SELECT<br>
+        select_type<br>
+      INTO<br>
+        variable_type<br>
+      FROM<br>
+        table_name<br>
+      [WHERE<br>
+        condition]; </b></p>
+</div>
+<div class="content">
+    <h3>In this syntax, the number of columns in the "variable_type" must be the same as the number of 
+        variables (or the number of components of a record) in the "select_type".  In addition, their corresponding data type must be compatible.</h3>
+    <h3>Besides the <i><u>WHERE clause</u></i>, you can use other clauses in the SELECT statement such as <i><u>INNER JOIN, GROUP BY, HAVING, and UNION.</u></i></h3>
+     <h3>~If the SELECT statement returns more than one row, Oracle will raise the "TOO_MANY_ROWS exception".</h3>
+     <h3>~If the SELECT statement does not return any row, Oracle will raise the "NO_DATA_FOUND exception."</h3>
+    </div>
+<div class="pic_text">
+    <h1>Output:-</h1>
+</div>
+<div class="image">
+    <img src="../output/8.PNG"/>
+    <img src="../output/8.1.PNG"/>
+</div>

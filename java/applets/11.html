@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../applets/applets.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Create an applet in Java to change the background color.</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            import java.applet.Applet;
+            import java.awt.*;
+            
+            public class pro11 extends Applet {
+               
+                public pro11() {
+                    setBackground(Color.red);
+                }
+            
+                public void paint(java.awt.Graphics g) {
+            
+                    g.drawString("Background Color Changed", 50, 50);
+                }
+                /*
+                 * <applet code="pro11.class" width="300" height="300">
+                 * </applet>
+                 */
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="11.png">
+</div>
+</section>

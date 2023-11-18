@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_index.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>Transaction Control Language(TCL) commands(COMMIT and ROLLBACK)</h1>
+<h3>&nbsp; &nbsp; &nbsp;&nbsp;Transaction Control Language (TCL) is used to manage transactions in a database. TCL statements are mainly used to manage the changes made by DML statements.
+     It also allows statements to be grouped together into logical transactions.
+    <h1 style="color:yellow;font-size: 25px;">COMMIT and ROLLBACK</h1>
+<h3>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;The changes made by the user are not physically written to the database table, giving only the user a view of his/her work, while the other users having access
+     to these tables, continue to get the old information.</h3>
+    <h3>The COMMIT statement is used to make changes to data (inserts, updates, deletes) permanent to the database.</h3>
+<h3>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;The user can continue with any number of inserts, updates and/or deletion, and still can undo the work by issuing the ROLLBACK statement. The ROLLBACK statement is used to discard parts
+     or all the work the user has done in the current 
+    transaction ROLLBACK is important in case an error is detected during the DML operations.</h3>
+<h3>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;The user can continue with any number of inserts, updates and/or deletion, and still can undo the work by issuing the ROLLBACK statement. The ROLLBACK statement is used to discard parts or all the work the user has done in the current transaction. 
+    ROLLBACK is important in case an error is detected during the DML operations.</h3>
+<h3>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;SQL *Plus has the facility to automatically commit all the work, without explicitly issuing the COMMIT command. This is done by setting AUTOCOMMIT feature ON.</h3>
+<h3><font color="greenyellow">SET AUTOCOMMIT ON:</font>Enable autocommit features</h3>
+<h3><font color="greenyellow">SET AUTOCOMMIT OFF:</font>Is the default and disable automatic commiting</h3>
+
+<h1 style="color:yellow;font-size: 25px;">1. IMPLICIT COMMIT</h1>
+<h3>The actions that will force a commit to occur, even without issuing the COMMIT command or without setting AUTOCOMMIT features ON are:</h3>
+</h3><h3>(i) Exiting SQL *Plus<br>
+    (ii) Creating a database object like: table, view, index etc.<br>    
+    (iii) Granting or Revoking resources<br>    
+    (iv) Altering objects<br>    
+    (v) Connecting or disconnecting from Database server<br>    
+    Using any of these commands implicitly performs the COMMIT operation.</h3>
+    </div>
+    <div class="syntax">
+        <h1>Syntax:-</h1>
+        </div>
+        <div class="box">
+            <p><b>COMMIT;</b></p>
+        </div>
+    <div class="content">
+            <h1 style="color:yellow;font-size: 25px;">2. AUTO ROLLBACK</h1>
+    <h3>After completion of any DML statement, if the user experiences serious difficulty such as hardware failure and no explicit commit is made, SQL will automatically ROLLBACK all un-committed work. If the machine or database goes down, it does this as cleanup work the next time the database is brought up.</h3> 
+</div>
+
+<div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>ROLLBACK;</b></p>
+    </div>

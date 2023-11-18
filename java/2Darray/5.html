@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../2Darray/2Darray.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Program to determine whether two matrices are equal</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a  
+            {    
+                public static void main(String[] args) {    
+                    int row1, col1, row2, col2;    
+                    boolean flag = true;    
+                        
+                    //Initialize matrix a    
+                    int a[][] = {       
+                                    {1, 2, 3},    
+                                    {8, 4, 6},    
+                                    {4, 5, 7}    
+                                };    
+                          
+                      //Initialize matrix b    
+                    int b[][] = {       
+                                    {1, 2, 3},    
+                                    {8, 4, 6},    
+                                    {4, 5, 7}    
+                        };    
+                          
+                    //Calculates the number of rows and columns present in the first matrix    
+                
+                      row1 = a.length;    
+                    col1 = a[0].length;    
+                        
+                    //Calculates the number of rows and columns present in the second matrix    
+                
+                      row2 = b.length;    
+                    col2 = b[0].length;    
+                        
+                    //Checks if dimensions of both the matrices are equal    
+                    if(row1 != row2 || col1 != col2){    
+                        System.out.println("Matrices are not equal");    
+                    }    
+                    else {    
+                        for(int i = 0; i < row1; i++){    
+                            for(int j = 0; j < col1; j++){    
+                              if(a[i][j] != b[i][j]){    
+                                  flag = false;    
+                                  break;    
+                              }    
+                            }    
+                        }    
+                            
+                        if(flag)    
+                            System.out.println("Matrices are equal");    
+                        else    
+                            System.out.println("Matrices are not equal");    
+                    }    
+                }    
+            }    
+          </pre>
+          <h2>Output:-</h2>
+          <img src="5.PNG">
+</div>
+</section>

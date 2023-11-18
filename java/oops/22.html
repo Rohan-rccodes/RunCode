@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create a class showing an example of copy constructor.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Fruit  {  
+                private double fprice;  
+                private String fname;  
+                //constructor to initialize roll number and name of the student  
+                Fruit(double fPrice, String fName)  
+                {   
+                fprice = fPrice;  
+                fname = fName;  
+                }  
+                //creating a copy constructor  
+                Fruit(Fruit fruit)  
+                {  
+                System.out.println("\nAfter invoking the Copy Constructor:\n");  
+                fprice = fruit.fprice;  
+                fname = fruit.fname;  
+                }  
+                //creating a method that returns the price of the fruit  
+                double showPrice()  
+                {  
+                return fprice;  
+                }  
+                //creating a method that returns the name of the fruit  
+                String showName()  
+                {  
+                return fname;  
+                }  
+                //class to create student object and print roll number and name of the student  
+                public static void main(String args[])  
+                {  
+                Fruit f1 = new Fruit(200, "Apple");  
+                System.out.println("Name of the first fruit: "+ f1.showName());  
+                System.out.println("Price of the first fruit: "+ f1.showPrice());  
+                //passing the parameters to the copy constructor  
+                Fruit f2 = new Fruit(f1);  
+                System.out.println("Name of the second fruit: "+ f2.showName());  
+                System.out.println("Price of the second fruit: "+ f2.showPrice());  
+                }  
+                }  
+                
+          </pre>
+          <h2>Output:-</h2>
+          <img src="22.png">
+</div>
+</section>

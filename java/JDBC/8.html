@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../JDBC/JDBC.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create a Scrollable Updateable Resultset and insert a new row, update an existing row and delete the row from Resultset and also the changes should be made to the database also. The values should be inserted, updated and deleted by the user only.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.sql.*;
+            import java.util.Scanner;
+            
+            class ScrollableResultSetExample {
+                public static void main(String[] args) {
+                    String url = "jdbc:mysql://localhost:3306/chatTest";
+                    String username = "root";
+                    String password = "";
+            
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password);
+                        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            
+                        // Create a ResultSet that is scrollable and updatable
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");
+            
+                        System.out.println("All rows before operations :");
+                        while (resultSet.next()) {
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));
+                        }
+            
+                        Scanner scanner = new Scanner(System.in);
+            
+                        // Insert a new row
+                        System.out.println("Enter values for new row:");
+                        System.out.print("Id: ");
+                        int id = scanner.nextInt();
+                        scanner.nextLine();
+                        System.out.print("Username: ");
+                        String usernameValue = scanner.nextLine();
+                        System.out.print("Message: ");
+                        String message = scanner.nextLine();
+            
+                        resultSet.moveToInsertRow();
+                        resultSet.updateInt("id", id);
+                        resultSet.updateString("username", usernameValue);
+                        resultSet.updateString("message", message);
+                        resultSet.insertRow();
+            
+                        // Update an existing row
+                        System.out.println("Enter values for row to update:");
+                        System.out.print("Id: ");
+                        int updateId = scanner.nextInt();
+                        scanner.nextLine();
+                        System.out.print("New message: ");
+                        String newMessage = scanner.nextLine();
+            
+                        resultSet.beforeFirst();
+                        while (resultSet.next()) {
+                            if (resultSet.getInt("id") == updateId) {
+                                resultSet.updateString("message", newMessage);
+                                resultSet.updateRow();
+                                break;
+                            }
+                        }
+            
+                        // Delete a row
+                        System.out.println("Enter id of row to delete:");
+                        int deleteId = scanner.nextInt();
+                        scanner.nextLine();
+            
+                        resultSet.beforeFirst();
+                        while (resultSet.next()) {
+                            if (resultSet.getInt("id") == deleteId) {
+                                resultSet.deleteRow();
+                                break;
+                            }
+                        }
+            
+                        scanner.close();
+            
+                        System.out.println("All rows after operations :");
+                        resultSet.beforeFirst();
+                        while (resultSet.next()) {
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));
+                        }
+            
+                    } catch (SQLException e) {
+                        System.out.println("SQLException: " + e.getMessage());
+                    } catch (Exception e){
+                        System.out.println("Exception: " + e.getMessage());
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="8.png">
+</div>
+</section>

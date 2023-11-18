@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../multithreading/multithreading.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create the program to create multiple threads, show an example of synchronization keyword.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Counter {
+                private int count = 0;
+            
+                // Method synchronized with the 'synchronized' keyword
+                public synchronized void increment() {
+                    count++;
+                }
+            
+                public int getCount() {
+                    return count;
+                }
+            }
+            
+            class MyThread extends Thread {
+                private Counter counter;
+            
+                public MyThread(Counter counter) {
+                    this.counter = counter;
+                }
+            
+                @Override
+                public void run() {
+                    for (int i = 0; i < 1000; i++) {
+                        counter.increment();
+                    }
+                }
+            }
+            
+            public class ThreadExample {
+                public static void main(String[] args) throws InterruptedException {
+                    Counter counter = new Counter();
+            
+                    // Creating multiple threads
+                    MyThread thread1 = new MyThread(counter);
+                    MyThread thread2 = new MyThread(counter);
+            
+                    // Start the threads
+                    thread1.start();
+                    thread2.start();
+            
+                    // Wait for threads to finish
+                    thread1.join();
+                    thread2.join();
+            
+                    // Display the final count
+                    System.out.println("Final Count: " + counter.getCount());
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="11.PNG">
+</div>
+</section>

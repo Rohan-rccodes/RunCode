@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Handle KeyBoardEvent</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+                
+// Java Program to Handle KeyBoardEvent
+import java.awt.*;
+import java.awt.event.*;
+
+class Main implements KeyListener {
+    static Frame frame;
+    static TextField tf1;
+    static TextField tf2;
+
+    // Driver function
+    public static void main(String args[]) {
+        frame = new Frame("Keyboard Event");
+        frame.setSize(500, 500);
+        frame.setLayout(null);
+
+        tf1 = new TextField();
+        tf1.setBounds(150, 100, 500, 50);
+
+        tf2 = new TextField();
+        tf2.setBounds(140, 400, 500, 50);
+
+        Main obj = new Main();
+
+        tf2.addKeyListener(obj);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent w) {
+                frame.dispose();
+            }
+        });
+        frame.setVisible(true);
+        frame.add(tf1);
+        frame.add(tf2);
+    }
+
+    public void keyReleased(KeyEvent e) {
+        tf1.setText("");
+        tf1.setText("Key Released : " + e.getKeyCode());        
+        System.out.println("Key Released");
+    }
+
+    // function to display the unicode of key pressed and the character if it is a letter or a digit
+    public void keyPressed(KeyEvent e) {
+        tf1.setText("");
+        tf1.setText("Key Pressed : " + e.getKeyCode());
+        System.out.println("Key Pressed");
+    }
+
+    // function to display the character of the key typed
+    public void keyTyped(KeyEvent e) {
+        tf1.setText("");
+        tf1.setText("Key Typed : " + e.getKeyChar());
+    System.out.println("Key Typed");
+    }
+}
+          </pre>
+          <h2>Output:-</h2>
+          <img src="5.png">
+</div>
+</section>

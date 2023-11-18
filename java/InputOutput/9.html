@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../InputOutput/InputOutput.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Get all characters from the file and display on the screen</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.io.BufferedReader;
+            import java.io.FileReader;
+            import java.io.IOException;
+            class a {
+            
+                public static void main(String[] args) {
+            
+                    // Replace 'filename.txt' with the actual filename of your file
+                    String fileName = "text.txt";
+            
+                    try {
+                        // Create a BufferedReader object to read the file
+                        BufferedReader br = new BufferedReader(new FileReader(fileName));
+            
+                        // Read each character from the file
+                        int currentChar;
+                        while ((currentChar = br.read()) != -1) {
+                            // Convert the character to its corresponding ASCII value and print it on the screen
+                            System.out.print((char) currentChar);
+                        }
+            
+                        // Close the BufferedReader object after reading the file
+                        br.close();
+            
+                    } catch (IOException e) {
+                        // Print an error message if the file could not be read
+                        System.out.println("An error occurred while trying to read the file: " + e.getMessage());
+                    }
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="9.PNG">
+</div>
+</section>

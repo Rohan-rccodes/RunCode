@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class GeometricShape with abstract methods area() and perimeter(). Create subclasses Triangle and Square that extend the GeometricShape class and implement the respective methods to calculate the area and perimeter of each shape</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            abstract class GeometricShape
+            {
+                abstract double area();
+                abstract double perimeter();
+            }
+            class Triangle extends GeometricShape
+            {
+                private double side1;
+                private double side2;
+                private double side3;
+            
+                public Triangle(double side1, double side2, double side3)
+                {
+                    this.side1 = side1;
+                    this.side2 = side2;
+                    this.side3 = side3;
+                }
+                // Override
+                double area()
+                {
+                    double s = (side1 + side2 + side3) / 2;
+                    return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+                }
+                // Override
+                double perimeter()
+                {
+                    return side1 + side2 + side3;
+                }
+            }
+            class Square extends GeometricShape
+            {
+                private double side;
+            
+                public Square(double side)
+                {
+                    this.side = side;
+                }
+                // Override
+                double area()
+                {
+                    return side * side;
+                }
+                // Override
+                double perimeter()
+                {
+                    return 4 * side;
+                }
+            }
+            class Test
+            {
+                public static void main(String[] args)
+                {
+                    Triangle triangle = new Triangle(3.0, 4.0, 5.0);
+            
+                    Square square = new Square(2.5);
+            
+                    System.out.println("Triangle Area: " + triangle.area());
+                    System.out.println("Triangle Perimeter: " + triangle.perimeter());
+            
+                    System.out.println("Square Area: " + square.area());
+                    System.out.println("Square Perimeter: " + square.perimeter());
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="26.png">
+</div>
+</section>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class Vehicle with abstract methods startEngine() and stopEngine(). Create subclasses Car and Motorcycle that extend the Vehicle class and implement the respective methods to start and stop the engines for each vehicle type.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            abstract class Vehicle {
+                // Abstract methods to be implemented by subclasses
+                public abstract void startEngine();
+                public abstract void stopEngine();
+            }
+            
+            class Car extends Vehicle {
+                @Override
+                public void startEngine() {
+                    System.out.println("Car engine started. Vroom!");
+                }
+            
+                @Override
+                public void stopEngine() {
+                    System.out.println("Car engine stopped.");
+                }
+            }
+            
+            class Motorcycle extends Vehicle {
+                @Override
+                public void startEngine() {
+                    System.out.println("Motorcycle engine started. Vroom!");
+                }
+            
+                @Override
+                public void stopEngine() {
+                    System.out.println("Motorcycle engine stopped.");
+                }
+            }
+            
+            public class VehicleExample {
+                public static void main(String[] args) {
+                    // Creating objects of Car and Motorcycle
+                    Car car = new Car();
+                    Motorcycle motorcycle = new Motorcycle();
+            
+                    // Starting and stopping engines
+                    System.out.println("Car Operations:");
+                    car.startEngine();
+                    car.stopEngine();
+            
+                    System.out.println("\nMotorcycle Operations:");
+                    motorcycle.startEngine();
+                    motorcycle.stopEngine();
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="21.PNG">
+</div>
+</section>

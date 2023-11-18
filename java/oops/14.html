@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            /*
+            1. Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.
+            */ 
+            
+            class Library 
+            {
+                String[] book = new String[5];
+            
+                int size = 5;
+            
+                int index;
+                
+                void add(String bookname)
+                {
+                    if (index == 5)
+                    {
+                        book[index] = bookname;
+                        index++;
+                    }
+                    else
+                    {
+                        System.out.println("index out of bond");
+                    }
+                }
+                void remove()
+                {
+                    if (index == 0)
+                    {
+                        index--;
+                    }
+                    else
+                    {
+                        System.out.println("not element to remove");
+                    }
+                }
+            
+                void displaybook()
+                {
+                    for (int i = 0; i < index; i++) {
+                        System.out.println(book[i]);
+                    }
+                }
+            }
+            class Test
+            {
+                public static void main(String[] args) {
+                    
+                    Library l = new Library();
+            
+                    l.add("time of error");
+                    l.add("hello bro");
+                    l.add("hero time");
+            
+                    l.remove();
+            
+            
+            
+                    l.displaybook();
+            
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="14.png">
+</div>
+</section>

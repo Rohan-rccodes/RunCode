@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Reverse String Word by Word</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.Scanner;  
+            public class strings_46_7032{  
+            public static void main(String[] args)   
+            {  
+            String str;  
+            System.out.println("Enter a string: ");  
+            Scanner scanner = new Scanner(System.in);  
+            str = scanner.nextLine();  
+            scanner.close();                                //closes the input stream  
+            String reversed = reverseString(str);  
+            System.out.println("The reversed string is: " + reversed);  
+            } 
+            public static String reverseString(String s)  
+            {  
+            if (s.isEmpty())                            //checks the string if empty  
+            return s;  
+            return reverseString(s.substring(1)) + s.charAt(0);                     //recursively called function  
+            }  
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/46.png">
+</div>
+</section>

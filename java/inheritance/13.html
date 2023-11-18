@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create a program, showing an example of method overriding</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Animal {
+                void makeSound() {
+                    System.out.println("The animal makes a sound");
+                }
+            }
+            
+            class Dog extends Animal {
+                @Override
+                void makeSound() {
+                    System.out.println("The dog barks");
+                }
+            }
+            
+            class Cat extends Animal {
+                @Override
+                void makeSound() {
+                    System.out.println("The cat meows");
+                }
+            }
+            
+            public class inheritance13_7024 {
+                public static void main(String[] args) {
+                    Animal animal = new Animal();
+                    animal.makeSound();
+            
+                    Dog dog = new Dog();
+                    dog.makeSound();
+            
+                    Cat cat = new Cat();
+                    cat.makeSound();
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="13.png">
+</div>
+</section>

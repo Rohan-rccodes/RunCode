@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../applets/applets.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create an applet in Java to draw a 4 concentric circles.</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            import java.applet.Applet;
+            import java.awt.Graphics;
+            /*<applet code="a.class" width="300" height="100">
+            Your browser does not support the <code>applet</code> tag.
+            </applet>>*/
+            public class a extends Applet {
+                public void paint(Graphics g) {
+                    // Draw four concentric circles
+                    int centerX = getWidth() / 2;
+                    int centerY = getHeight() / 2;
+            
+                    int radius1 = 20;
+                    int radius2 = 40;
+                    int radius3 = 60;
+                    int radius4 = 80;
+            
+                    g.drawOval(centerX - radius1, centerY - radius1, radius1 * 2, radius1 * 2);
+                    g.drawOval(centerX - radius2, centerY - radius2, radius2 * 2, radius2 * 2);
+                    g.drawOval(centerX - radius3, centerY - radius3, radius3 * 2, radius3 * 2);
+                    g.drawOval(centerX - radius4, centerY - radius4, radius4 * 2, radius4 * 2);
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="7.PNG">
+</div>
+</section>

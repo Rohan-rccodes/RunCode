@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Pogram To Find Distance Between Two Points.
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.Scanner;
+            class p50 {
+                public static void main(String[] args) {
+                    
+                    // Scanner class object to read input values
+                    Scanner sc = new Scanner(System.in);
+                    
+                    // declare variables
+                    int x1, x2, y1, y2, x, y;
+                    double dist;
+                    
+                    // read coordinates from user
+                    System.out.print("Enter first point coordinates: ");
+                    x1 = sc.nextInt();
+                    y1 = sc.nextInt();
+                    System.out.print("Enter second point coordinates: ");
+                    x2 = sc.nextInt();
+                    y2 = sc.nextInt();
+                    // calculate distance
+                    x = x2 - x1;
+                    y = y2 - y1;
+                    dist = Math.sqrt(x * x + y * y);
+                    
+                    // print result
+                    System.out.println("Distance between two points = " + dist);
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/50.PNG">
+</div>
+</section>

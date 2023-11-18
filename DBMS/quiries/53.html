@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_index.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>Views</h1>
+<h3 style="color: yellow;">1. INTRODUCTION TO VIEWS:-</h3>
+<h3>~View is a virtual table, through which a selective portion of the data from one or more tables can be seen. A view contains no data of its own but it is like a 'window' through which data from tables can be viewed or changed. The tables on which a view is based are called base tables.
+     Base tables might in turn be actual tables or might be views themselves. All operations performed on a view actually affect the base table of the view. 
+    DML operations on a view like INSERT, UPDATE, DELETE affects the data in the original table upon which the view is based. You can use views in almost the same way as tables. You can query, update, insert into, and delete from views, just as you can standard tables.</h3>
+<h3 style="margin-bottom: 20px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  
+    The view is stored as a SELECT statement in the data dictionary. They are used to restrict access to the database or to hide data complexity. The changes in the tables are automatically reflected in the views.</h3>
+</div>
+<div class="syntax">
+<h1>Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>CREATE VIEW  view_name<br>
+    as<br>
+    SELECT column_list<br>
+    FROM table_name [WHERE condition];</b></p>
+</div>
+<div class="pic_text">
+    <h1>Example:-</h1>
+    <h3 style="color: white;margin-left: -110px;"><br><br>~creat a view for the student belonging to age 20 of student table.</h3>
+</div>
+<div class="image">
+    <img src="../../sql/output/53.PNG"/>
+</div>
+<div class="content">
+    <h3>~In Oracle, the view continues to exist even after one of the tables (that the view is based on) is dropped from the database. However, if you try to query the view after the 
+        table has been dropped, you will receive a message indicating that the view has errors. But, if you recreate the table (that you had dropped), the view will again be fine.
+<br>~A VIEW can be derived from another VIEW.</h3>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ~The <font color=yellow>OR REPLACE </font>Option allows a view to be created even if one exists with this name already, thus replacing the old version of the view for its owner. This means that the view can be altered without
+     dropping, recreating and regranting object privileges.</h3>
+</div>
+</div>
+<div class="pic_text">
+    <h1>Example:-</h1>
+    </div>
+<div class="image">
+    <img src="../../sql/output/53.1.PNG"/>
+</div>
+<div class="content">
+    <h3 style="color: yellow;margin-top: 50px;">2. NEED OF VIEWS:-</h3>
+    <h3>~A view is required in several cases. Let us start with a simple requirement. Assume the table EMP is owned by user SCOTT. As the owner of the table SCOTT will have all the privileges on that table. Now, if another user JOHN wants to access EMP table, then SCOTT can grant permission to JOHN. But, if SCOTT doesn't want JOHN to access column SAL from EMP table then SCOTT cannot stop JOHN from accessing SAL column because after taking permissions, JOHN will have complete access to the table EMP. If SCOTT creates a new table from EMP table that includes everything from EMP table except SAL column and grants its permission to JOHN, then it fulfills the requirement but store a separate copy of the data.
+       <br> <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Creating a view in the above requirement is quite ideal for two reasons:    
+        <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;1. It fulfills the requirement without storing a separate copy of the data, because a
+        view does not store any data of its own and always takes &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;the data from base table.    
+        <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;2. As the data is taken from base table, accurate and up-to-date information is provided to JOHN. Yet the column to be hidden from JOHN is &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;hidden as it is not part of the view.</h3>
+    <h3 style="color: yellow;margin-top: 50px;">3. ADVANTAGES OF VIEWS:-</h3>
+    <h3>~A view has the following adantages:-</h3>
+<h3>
+    <ul style="list-style-type:circle"></ul>
+    <li>A view restricts access to the database because the view can display selective columns from the table.</li>
+    <li> As a view does not store any data, the redundancy problem does not arise.</li>    
+    <li>Critical data in the base table is protected as access to such data can be controlled using views by not selecting those columns during the creation of a view. • Views allow users to make simple queries to retrieve the results from complicated
+    queries. For example: Views allow users to select information from multiple tables  
+    without knowing how to perform a JOIN.</li>
+    <li>Different views can be created on the same base table for different users.</li>
+    </ul>
+</h3></div>
+<div class="content">
+    <h3 style="color: yellow;margin-top: 50px;">4. DROPPING A VIEW:-</h3>
+    <h3>&nbsp; &nbsp; &nbsp;&nbsp;You can drop any view contained in your schema. To drop a view in another user's schema, you must have the DROP ANY VIEW system privilege.
+         DROP VIEW statement is used to drop a view from a database. The syntax of DROP VIEW statement is:</h3>
+         </div>
+         <div class="syntax">
+            <h1>Syntax:-</h1>
+            </div>
+            <div class="box">
+                <p><b>drop VIEW  view_name</b></p>
+            </div>
+            <div class="syntax">
+                <h1>Example:-</h1>
+            </div>
+            <div class="box">
+                <p><b>drop VIEW  v1;</b></p>
+             </div>
+             <div class="image">
+                <img src="../../sql/output/53.2.PNG"/>
+            </div>                  
+            

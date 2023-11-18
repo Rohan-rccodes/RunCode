@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1> How can we use GROUP BY CLAUSE in table?</h1>
+<h3>~GROUP BY clause is used for making groups of the data we cannot use GROUP BY clause without group 
+    functions(aggregiate functions).<br>
+    ~GROUP FUNCTION:-They works on multiple rows and return only one row.<br>
+    <font color=yellow> 
+    1.min()= It returns the minimum value from the given column.<br>
+    2.max()=It returns the maximum value from the given column.<br>
+    3.sum()=It returns the addition of data of the given column.<br> 
+    4.average()=It returns the average of the given column.<br>
+    5.count()=It returns the counting of that column ignoring NULL values.<br> 
+    6.count(*)=It returns the number of rows in the table.</font>
+</h3>
+</div>
+<div class="syntax">
+<h1>Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>SELECT column1, column2,...columnN FROM table_name
+        [WHERE]
+        [GROUP BY column1, column2...columnN]
+        [HAVING]
+        [ORDER BY]</b></p>
+</div>
+<div class="pic_text">
+    <h1>Example:-</h1>
+</div>
+<div class="image">
+    <img src="../../sql/output/26.PNG"/>
+</div>                  

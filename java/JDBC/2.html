@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../JDBC/JDBC.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create the table in the database from Java API.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            //Program no. : jdbc2
+            //Program name : Create the table in the database from Java API.
+            
+            // java -cp "D:\44\javaPrograms\jd\JDBC;C:\mysql-connector-j-8.2.0.jar" DataDefination
+            
+            class DataDefination {
+                public static void main(String[] args) {
+                    try {
+            
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+            
+                        java.sql.Connection connect = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/test",
+                                "root", "");
+            
+                        if (connect.isClosed()) {
+                            System.out.println(" Your Connection is Closed!");
+                            System.exit(0);
+                        }
+            
+                        // ------------------------------------------------------
+            
+                        System.out.println(" Your Connection is Establised ");
+            
+                        java.sql.Statement state = connect.createStatement();
+            
+                        String create_table_query = "CREATE Table mytable3 (id int)";
+            
+                        Boolean result = state.execute(create_table_query);
+            
+                        if (result) {
+                            System.out.println("Table created!");
+                        }
+                        // -----------------------------------------------------
+            
+                        connect.close();
+            
+                        if (connect.isClosed())
+                            System.out.println(" Successfully Connection is Closed!");
+                    } catch (ClassNotFoundException error) {
+                        System.out.print(error.getMessage());
+                    } catch (java.sql.SQLException error) {
+                        System.out.print(error.getMessage());
+                    }
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="2.png">
+</div>
+</section>

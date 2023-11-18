@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../applets/applets.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create an applet to display a digital clock.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.applet.Applet;
+            import java.awt.Color;
+            import java.awt.Font;
+            import java.awt.Graphics;
+            import java.text.SimpleDateFormat;
+            import java.util.Date;
+            
+            public class a extends Applet implements Runnable {
+                private Thread thread;
+                private SimpleDateFormat dateFormat;
+            
+                public void init() {
+                    setBackground(Color.BLACK);
+                    setForeground(Color.GREEN);
+                    Font font = new Font("Arial", Font.PLAIN, 24);
+                    setFont(font);
+            
+                    dateFormat = new SimpleDateFormat("HH:mm:ss");
+                }
+            
+                public void start() {
+                    if (thread == null) {
+                        thread = new Thread(this);
+                        thread.start();
+                    }
+                }
+            
+                public void stop() {
+                    if (thread != null) {
+                        thread.interrupt();
+                        thread = null;
+                    }
+                }
+            
+                public void run() {
+                    while (true) {
+                        repaint();
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            
+                public void paint(Graphics g) {
+                    Date now = new Date();
+                    String timeString = dateFormat.format(now);
+                    g.clearRect(0, 0, getWidth(), getHeight());
+                    g.drawString(timeString, 20, 50);
+                }
+            }
+            
+            /*<applet code="a.class" width="300" height="100">
+            Your browser does not support the <code>applet</code> tag.
+            </applet>>*/            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="14.PNG">
+</div>
+</section>

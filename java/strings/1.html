@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Program to Check if a String contains only digits?</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Java program for the above approach 
+            // contains only digits 
+            class string1 { 
+            
+                // Function to check if a string 
+                // contains only digits 
+                public static boolean
+                onlyDigits(String str, int n) 
+                { 
+                    // Traverse the string from 
+                    // start to end 
+                    for (int i = 0; i < n; i++) { 
+            
+                        // Check if character is 
+                        // not a digit between 0-9 
+                        // then return false
+                        if (str.charAt(i) < '0'
+                            || str.charAt(i) > '9') { 
+                            return false; 
+                        } 
+                    } 
+                    // If we reach here, that means 
+                    // all characters were digits.
+                    return true; 
+                } 
+            
+                // Driver Code 
+                public static void main(String args[]) 
+                { 
+                    // Given string str 
+                    String str = "1a234"; 
+                    int len = str.length(); 
+            
+                    // Function Call 
+                    System.out.println(onlyDigits(str, len)); 
+                } 
+            }         
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/1.png">
+</div>
+</section>

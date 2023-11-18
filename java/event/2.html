@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Create Text Area and Password Field</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.awt.*;
+            import javax.swing.*;
+            class pro2
+            {
+                
+                public static void main(String args[])
+                {
+                    //Create a frame
+                    Frame frame=new Frame("Login");
+                    TextField name= new TextField();
+                    JPasswordField pswd; 
+                    frame.setSize(400,400);
+                    frame.setLayout(null);
+                    frame.setBackground(Color.white);
+                    //Create two labels
+                    Label l_name=new Label("Name :");
+                    Label l_pswd=new Label("Password :");
+                    l_name.setBounds(50,50,50,50);
+                    l_pswd.setBounds(20,100,80,50);
+                    frame.add(l_name);
+                    frame.add(l_pswd);
+                    //Create two text fields for name and password
+                    name=new TextField();
+                    pswd=new JPasswordField();
+                    name.setBounds(100,50,250,50);
+                    pswd.setBounds(100,100,250,50);
+                    frame.add(name);
+                    frame.add(pswd);
+                    
+                    frame.setVisible(true);
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="2.png">
+</div>
+</section>

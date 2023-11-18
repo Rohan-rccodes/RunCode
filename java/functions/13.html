@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../functions/functions.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.Scanner;
+            class a {
+            
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+            
+                    // Ask the user to enter a string
+                    System.out.print("Enter a string: ");
+                    String userInput = scanner.nextLine();
+            
+                    // Check if all characters in the string are vowels
+                    boolean result = true;
+            
+                    // Check if the string is null or empty
+                    if (userInput == null || userInput.isEmpty()) {
+                        result = false;
+                    } else {
+                        // Convert the string to lowercase to handle both uppercase and lowercase vowels
+                        userInput = userInput.toLowerCase();
+            
+                        // Check each character in the string
+                        for (int i = 0; i < userInput.length(); i++) {
+                            char currentChar = userInput.charAt(i);
+            
+                            // If the character is not a vowel, set result to false and break out of the loop
+                            if (currentChar != 'a' && currentChar != 'e' && currentChar != 'i' &&
+                                currentChar != 'o' && currentChar != 'u') {
+                                result = false;
+                                break;
+                            }
+                        }
+                    }
+            
+                    // Display the result
+                    if (result) {
+                        System.out.println("All characters in the string are vowels.");
+                    } else {
+                        System.out.println("Not all characters in the string are vowels.");
+                    }
+            
+                    scanner.close();
+                }
+            }           
+          </pre>
+          <h2>Output:-</h2>
+          <img src="13.PNG">
+</div>
+</section>

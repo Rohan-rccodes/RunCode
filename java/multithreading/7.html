@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../multithreading/multithreading.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program that creates a bank account with concurrent deposits and withdrawals using threads.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Bank {
+                int total = 100;
+                void withdrawn(String name, int withdrawal){
+                if (total >= withdrawal) {
+                System.out.println(name + " withdrawn "+ withdrawal);
+                total = total - withdrawal;
+                System.out.println(total);
+                try {
+                Thread.sleep(1000);
+                }
+                catch (InterruptedException e) {
+                e.printStackTrace();}}
+                else {
+                System.out.println(name+ " you can not withdraw "+ withdrawal);
+                System.out.println("your balance is: " + total);
+                try {
+                Thread.sleep(1000);
+                }
+                catch (InterruptedException e) {
+                e.printStackTrace();}
+                }}
+                void deposit(String name, int deposit){
+                System.out.println(name + " deposited " + deposit);
+                total = total + deposit;
+                System.out.println("Balance after deposit: "+ total);
+                try {
+                Thread.sleep(1000);
+                }
+                catch (InterruptedException e) {
+                e.printStackTrace();}
+                }}
+                
+                class ThreadWithdrawal extends Thread {
+                
+                    Bank object;
+                    String name;
+                    int dollar;
+                
+                    ThreadWithdrawal(Bank ob, String name, int money)
+                    {
+                        this.object = ob;
+                        this.name = name;
+                        this.dollar = money;
+                    }
+                
+                    public void run() { object.withdrawn(name, dollar); }
+                }
+                
+                class ThreadDeposit extends Thread {
+                
+                    Bank object;
+                    String name;
+                    int dollar;
+                    ThreadDeposit(Bank ob, String name, int money)
+                    {
+                        this.object = ob;
+                        this.name = name;
+                        this.dollar = money;
+                    }
+                
+                    public void run() { object.deposit(name, dollar); }
+                }
+                
+                
+                class main1 {
+                
+                    public static void main(String[] args)
+                    {
+                        
+                        Bank obj = new Bank();
+                
+                        ThreadWithdrawal t1 = new ThreadWithdrawal(obj, "Arnab", 20);
+                        ThreadWithdrawal t2 = new ThreadWithdrawal(obj, "Mandeep", 40);
+                        ThreadDeposit t3 = new ThreadDeposit(obj, "Mukta", 35);
+                        ThreadWithdrawal t4 = new ThreadWithdrawal(obj, "Rinku", 80);
+                        ThreadWithdrawal t5 = new ThreadWithdrawal(obj, "Shubham", 40);
+                
+                        t1.start();
+                        t2.start();
+                        t3.start();
+                        t4.start();
+                        t5.start();
+                    }
+                }                
+          </pre>
+          <h2>Output:-</h2>
+          <img src="7.jfif">
+</div>
+</section>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../interfaces/interfaces.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an interface Flyable with a method called fly_obj(). Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface. Implement the fly_obj() method for each of the three classes.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Flyable interface
+            interface Flyable {
+                void fly_obj();
+            }
+            
+            // Spacecraft class implementing Flyable interface
+            class Spacecraft implements Flyable {
+                @Override
+                public void fly_obj() {
+                    System.out.println("Spacecraft is flying in space.");
+                }
+            }
+            
+            // Airplane class implementing Flyable interface
+            class Airplane implements Flyable {
+                @Override
+                public void fly_obj() {
+                    System.out.println("Airplane is flying in the sky.");
+                }
+            }
+            
+            // Helicopter class implementing Flyable interface
+            class Helicopter implements Flyable {
+                @Override
+                public void fly_obj() {
+                    System.out.println("Helicopter is flying in the air.");
+                }
+            }
+            
+            class fly{
+                public static void main(String[] args) {
+                    // Create objects of each class and call fly_obj() method
+                    Spacecraft sc = new Spacecraft();
+                    Airplane ap = new Airplane();
+                    Helicopter hc = new Helicopter();
+            
+                    // Call fly_obj() method for each object
+                    sc.fly_obj();
+                    ap.fly_obj();
+                    hc.fly_obj();
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="3.PNG">
+</div>
+</section>

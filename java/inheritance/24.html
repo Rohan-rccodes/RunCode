@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class Shape2D with abstract methods draw() and resize(). Create subclasses Rectangle and Circle that extend the Shape2D class and implement the respective methods to draw and resize each shape.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            //Shape2D.java
+            abstract class Shape2D {
+              public abstract void draw();
+            
+              public abstract void resize();
+            }
+            //Rectangle.java
+            class Rectangle extends Shape2D {
+              @Override
+              public void draw() {
+                System.out.println("Rectangle: Drawing a rectangle.");
+              }
+            
+              @Override
+              public void resize() {
+                System.out.println("Rectangle: Resizing the rectangle.");
+              }
+            }
+            //Circle.java
+            class Circle extends Shape2D {
+              @Override
+              public void draw() {
+                System.out.println("Circle: Drawing a circle.");
+              }
+            
+              @Override
+              public void resize() {
+                System.out.println("Circle: Resizing the circle.");
+              }
+            }
+            //Main.java
+            class Inheritance_24 {
+              public static void main(String[] args) {
+                Shape2D rectangle = new Rectangle();
+                Shape2D circle = new Circle();
+            
+                rectangle.draw();
+                rectangle.resize();
+            
+                circle.draw();
+                circle.resize();
+              }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="24.png">
+</div>
+</section>

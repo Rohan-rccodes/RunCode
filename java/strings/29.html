@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Program to find the most repeated word in a text file</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MostRepeatedWord {
+    public static void main(String[] args) {
+        // Replace "yourFilePath.txt" with the actual path to your text file
+        String filePath = "text.txt";
+
+        try {
+            String mostRepeatedWord = findMostRepeatedWord(filePath);
+            System.out.println("Most Repeated Word: " + mostRepeatedWord);
+        } catch (IOException e) {
+            System.err.println("Error reading the file: " + e.getMessage());
+        }
+    }
+
+    private static String findMostRepeatedWord(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+
+        String line;
+        Map<String, Integer> wordFrequency = new HashMap<>();
+
+        // Read each line from the file
+        while ((line = reader.readLine()) != null) {
+            // Split the line into words
+            String[] words = line.split("\\s+");
+
+            // Count the frequency of each word
+            for (String word : words) {
+                word = word.toLowerCase(); // Convert to lowercase to treat words case-insensitively
+                wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
+            }
+        }
+
+        // Find the word with the highest frequency
+        String mostRepeatedWord = null;
+        int maxFrequency = 0;
+
+        for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
+            if (entry.getValue() > maxFrequency) {
+                mostRepeatedWord = entry.getKey();
+                maxFrequency = entry.getValue();
+            }
+        }
+
+        reader.close();
+
+        return mostRepeatedWord;
+    }
+}
+    
+
+//text.txt
+This is a sample text file. The file contains some sample text for testing.
+The word "sample" appears multiple times in this text file.
+
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/29.PNG">
+</div>
+</section>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../2Darray/2Darray.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Program to Add Two Matrices</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import java.util.Scanner;
+            class a 
+            {
+                public static void main(String[] args) 
+                {
+                    Scanner scanner = new Scanner(System.in);
+            
+                    
+                    System.out.print("Enter the number of rows: ");
+                    int rows = scanner.nextInt();
+            
+                    System.out.print("Enter the number of columns: ");
+                    int columns = scanner.nextInt();
+            
+                    
+                    int[][] matrix1 = new int[rows][columns];
+                    System.out.println("Enter the elements of the first matrix:");
+                    enterMatrixElements(scanner, matrix1);
+            
+                    
+                    int[][] matrix2 = new int[rows][columns];
+                    System.out.println("Enter the elements of the second matrix:");
+                    enterMatrixElements(scanner, matrix2);
+            
+                    
+                    int[][] sum = addMatrices(matrix1, matrix2);           
+                    
+                    System.out.println("Sum of the matrices:");
+                    printMatrix(sum);
+                }
+                public static void enterMatrixElements(Scanner scanner, int[][] matrix) {
+                    for (int i = 0; i < matrix.length; i++) {
+                        for (int j = 0; j < matrix[0].length; j++) {
+                            System.out.print("Enter element at position (" + i + ", " + j + "): ");
+                            matrix[i][j] = scanner.nextInt();
+                        }
+                    }
+                }
+                public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+                    int rows = matrix1.length;
+                    int columns = matrix1[0].length;            
+                    int[][] sum = new int[rows][columns];            
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            sum[i][j] = matrix1[i][j] + matrix2[i][j];
+                        }
+                    }            
+                    return sum;
+                }
+            
+                public static void printMatrix(int[][] matrix) {
+                    for (int i = 0; i < matrix.length; i++) {
+                        for (int j = 0; j < matrix[0].length; j++) {
+                            System.out.print(matrix[i][j] + "\t");
+                        }
+                        System.out.println();
+                    }
+                }
+            }         
+          </pre>
+          <h2>Output:-</h2>
+          <img src="2.PNG">
+</div>
+</section>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../strings/strings.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Program to Swapping Pair of Characters
+
+            Tutorial
+            Explanation -
+            
+            Enter the string from user and enter the characters that you want to swap with one another</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            import java.util.Scanner;
+
+            class CharacterSwapper {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+            
+                    
+                    System.out.print("Enter a string: ");
+                    String userString = scanner.nextLine();
+            
+                    System.out.print("Enter the first character to swap: ");
+                    char charToSwap1 = scanner.next().charAt(0);
+            
+                    System.out.print("Enter the second character to swap: ");
+                    char charToSwap2 = scanner.next().charAt(0);
+            
+                    
+                    if (userString.contains(String.valueOf(charToSwap1)) && userString.contains(String.valueOf(charToSwap2))) {
+                        
+                        String resultString = swapCharacters(userString, charToSwap1, charToSwap2);
+                        System.out.println("Original string: " + userString);
+                        System.out.println("String after swapping characters: " + resultString);
+                    } else {
+                        System.out.println("Error: At least one of the characters is not present in the input string.");
+                    }
+                }
+            
+                private static String swapCharacters(String inputString, char char1, char char2) {
+                    StringBuilder swappedString = new StringBuilder();
+                    for (char ch : inputString.toCharArray()) {
+                        if (ch == char1) {
+                            swappedString.append(char2);
+                        } else if (ch == char2) {
+                            swappedString.append(char1);
+                        } else {
+                            swappedString.append(ch);
+                        }
+                    }
+                    return swappedString.toString();
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/43.png">
+</div>
+</section>

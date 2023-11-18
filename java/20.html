@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to compute the sum of the first 100 prime numbers.
+          <h2>Code:-</h2>
+          <pre><br>
+            class p20 {
+
+                public static void main(String a[])
+                {
+                  int n=100,sum=0,i=1,j;
+                  
+                  int t=n;
+                  while(n!=0)
+                  {
+                    int count=0;
+                    for(j=1;j<=i;j++)
+                    {
+                      if(i%j==0)
+                      {
+                        count++;
+                      }
+                    }
+                    if(count==2)
+                    {
+                      sum=sum+i;
+                      n--;
+                    }
+                    i++;
+                  }
+                  System.out.println("Sum of first "+t+" prime numbers is "+sum);
+                }
+              }
+              
+              
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/20.png">
+</div>
+</section>

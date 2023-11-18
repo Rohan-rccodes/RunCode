@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>JOINS</h1>
+<h3>SQL Joins are used to relate information in different tables. Joins are used to combine columns from different tables. The connection between tables is established through the WHERE clause, called SQL Join condition.
+     With Joins, the information from any number of tables can be accessed.</h3>
+</div>
+<div class="syntax">
+<h1>Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>Select tablel.column,table2.column,...,tableN.column FROM table2,tableN
+        WHER tablel.column1= table2.column2;
+    </b></p>
+</div>
+<div class="content">
+    <h1>TYPES OF JOINS:-</h1>
+    <H3>In SQL Joins can be generally classified into following categories:
+        <br>(i) Equi Join/ Inner join <br>
+        (ii) Cartesian Join / Cross join<br>
+        (iii) Outer Join /Right join<br>
+        (iv)Self Join
+    </H3>
+    <h3><font color=yellow>(i) Equi Join/ Inner join </font><br>
+        When two tables are joined together using equality of values in one or more columns they make an Equi join. Table prefixes are utilized to prevent ambiguity and the WHERE clause specifies the columns being joined. It is a simple SQL join condition which uses the
+        equal sign as the comparison operator.</h3>
+</div>
+<div class="content">                  
+<h3><font color=yellow>(ii) Cartesian Join / Cross join</font><br>
+    If a SQL join condition is omitted or if it is invalid the join operation will result
+     in a Cartesian product. The Cartesian product returns the number of rows equal to the product of all rows in all the tables being joined.</h3>
+</div>
+<div class="pic_text">
+<h1>Example:-</h1>
+</div>
+<div class="image">
+<img src="../../sql/output/49.1.PNG"/>
+</div>
+<div class="content">    
+<h3><font color=yellow>(iii) Outer Join /Right join</font><br>
+    This SQL join condition returns all rows from both tables which satisfy the join condition along with rows which do not satisfy the join condition from one of the tables.
+
+    The Outer join is mainly preferred in such cases; if there are any values in one table that do not have corresponding value(s) in the other. Such rows can be forcefully selected by using the Outer join symbol (+). It is used on one side of the join condition only. The corresponding columns for that row will have NULLS.</h3>
+</div>
+ 
+<div class="content">    
+    <h3><font color=yellow>(iv) Self join</font><br>
+        The Self join is mainly preferred to join a table with itself. This means that each row of the table is combined with itself and with every other row of the table. The self join can be viewed as a join of two copies of the same table. The table is not actually copied, but SQL performs the command as though it were.
+
+The syntax of the command for joining a table to itself is almost the same as that for joining two different tables. To distinguish the column names from one another, aliases for the actual table name are used, since both the tables have the same name. Table name aliases are defined in the FROM clause of the query.</h3>
+    </div>
+    

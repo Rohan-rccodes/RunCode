@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../AWT/AWT.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Create a simple AWT application design a calculator that displays buttons, TextField with GridLayout manager.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class Calculator extends java.awt.Frame
+            /* implements java.awt.event.ActionListener */
+            {
+                Calculator()
+                {
+                    setSize(400,500);
+                    setResizable(false);
+                    setLayout(null);
+            
+                    add(Calculator.myField());
+            
+                    Calculator.myButton(this,16);
+                }
+                private static java.awt.Font myFont(int size)
+                {
+                    return new java.awt.Font("Arial",0,size);
+                }
+                private static java.awt.TextField myField()
+                {
+                    java.awt.TextField fld = new java.awt.TextField();
+            
+                    fld.setBounds(0,0,400,100);
+            
+                    fld.setEditable(true);
+            
+                    fld.setFont(Calculator.myFont(25));
+            
+                    fld.setForeground(java.awt.Color.BLACK);
+            
+                    fld.setBackground(java.awt.Color.WHITE);
+            
+                    return fld;
+                }
+                private static void myButton(java.awt.Frame frame,int size)
+                {
+                    java.awt.Button btn[] = new java.awt.Button[size];
+            
+                    int x = 0, y = 100;	// default coordinates
+            
+                    char btn_label = ' ';
+            
+                    for (int i = 0; i < size; i++)
+                    {
+                        btn[i] = new java.awt.Button();
+            
+                        if (i > 9)
+                        {
+                            switch(i)
+                            {
+                                case 10 : btn_label = '+'; break;
+            
+                                case 11 : btn_label = '-'; break;
+            
+                                case 12 : btn_label = '*'; break;
+            
+                                case 13 : btn_label = '/'; break;
+            
+                                case 14 : btn_label = '%'; break;
+            
+                                default : btn_label = '=';
+                            }
+                            btn[i].setLabel(""+btn_label+"");
+                        }
+                        else
+                        {
+                            btn[i].setLabel(""+i+"");
+                        }
+            
+                        if (i != 0)
+                        {
+                            if ((i%4) == 0)
+                            {
+                                x = 0;
+                                y += 100;
+                            }
+                            else
+                            {
+                                x += 100;
+                            }
+                        }
+                        btn[i].setBounds(x,y,100,100);
+            
+                        Calculator.buttonStyle(btn[i],25);
+            
+                        // btn[i].addActionListener(btn[i]);
+            
+                        frame.add(btn[i]);
+                    }
+                }
+                private static void buttonStyle(java.awt.Button btn, int size)
+                {
+                    btn.setFont(Calculator.myFont(size));
+                    btn.setForeground(java.awt.Color.GRAY);
+                    btn.setBackground(java.awt.Color.WHITE);
+                }
+                private static void buttonActionStyle(java.awt.Button btn, int size)
+                {
+                    btn.setFont(Calculator.myFont(size));
+                    btn.setForeground(java.awt.Color.BLACK);
+                    btn.setBackground(java.awt.Color.WHITE);
+                }
+                /*
+                    @Override : ActionListener
+                public void actionPerformed(java.awt.event.ActionEvent element)
+                {
+                    Calculator.buttonActionStyle(this,20);
+            
+                    System.out.println(" button "+this.getLabel());
+                }
+                public static void main(String args[])
+                {
+                    System.out.println(" Calculator execute ... ");
+            
+                    new Calculator().setVisible(true);
+                }
+            }
+            // the end ---
+          </pre>
+          <h2>Output:-</h2>
+          <img src="18.png">
+</div>
+</section>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>TRIGGERS</h1>
+<h3>~ Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −</h3>
+<H3 style="color:yellow">A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)<br>
+    A database definition (DDL) statement (CREATE, ALTER, or DROP).<br>    
+    A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).</H3> 
+    <h3>
+        Triggers can be defined on the table, view, schema, or database with which the event is associated.
+  </h3>
+  <H3 style="color:yellow">Benefits of Triggers</H3>
+ <h3> 1. Generating some derived column values automatically<br>
+    2. Enforcing referential integrity<br>
+    3. Event logging and storing information on table access<br>
+    4. Auditing<br>
+    5. Synchronous replication of tables<br>
+    6. Imposing security authorizations<br>
+    7. Preventing invalid transactions<br>
+    </h3>
+    <H3 style="color:yellow">Creating Triggers</H3>
+<h3>syntax:-</h3>
+</div>
+<div class="box">
+    <p><b>  CREATE [OR REPLACE ] TRIGGER trigger_name <br> 
+        {BEFORE | AFTER | INSTEAD OF }  <br>
+        {INSERT [OR] | UPDATE [OR] | DELETE}<br>  
+        [OF col_name]  <br>
+        ON table_name  <br>
+        [REFERENCING OLD AS o NEW AS n]  <br>
+        [FOR EACH ROW]  <br>
+        WHEN (condition) ; <br>
+        DECLARE <br>
+        Declaration-statements<br> 
+     BEGIN  <br>
+        Executable-statements <br>
+     EXCEPTION <br>
+        Exception-handling-statements <br>
+     END; </p>
+</div>
+<div class="syntax">
+    <h1 style="padding-top: 20px;">Examples:-</h1>
+    <h3 style="padding-top: 10px;color:antiquewhite">Trigger created:-</h3>
+    </div>
+    <div class="image">
+        <img src="../output/24.PNG"/>
+    </div>  
+    <div class="syntax">
+        <h3 style="padding-top: 10px;color:antiquewhite">Triggering  a trigger:-</h3>
+        </div>
+        <div class="image">
+            <img src="../output/24.1.PNG"/>
+        </div>  
+    <H3 style="color:greenyellow">1. Predefined Exceptions:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predefined exceptions are internally defined by runtime system Predefined exceptions are raised implicitly whenever PL/SQL program violates an ORACLE rule or exceeds a system-dependent limit. Every Oracle error has a number, but exceptions must be handled by name. So, PL/SQL predefines some common ORACLE errors as exceptions.
+<BR><BR>
+            For example, if you try to divide a number by zero then PL/SQL raises an exception called ZERO DIVIDE and if SELECT can not find a record then PL/SQL raises exception NO DATA FOUND</H3>   
+    </H3>   
+    <H3 style="color:greenyellow">How to handle exceptions?:-</H3>
+    <h3>When PL/SQL raises a predefined exception, the program is aborted by displaying error message. But if program is to handle exception raised by PL/SQL then we have to use Exception handling part of the PL/SQL block
+<br><br>
+        Exception handling part is used to specify the statements to be executed when ant exception occurs. Control is transferred to exception handling part whenever an exception. occurs. After the exception handler is executed, control is transferred to next statement in the enclosing block.</h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            When < exceptions-identifier > then < action >;</p>
+    </div>
+    <div class="content">
+        <div class="content">
+            <H3 style="color:yellow">Some of the Predefined-Exceptions:-</H3>
+    </div>
+    <div class="image">
+        <img src="../output/24.PNG"/>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+        <div class="image">
+            <img src="../output/24.1.PNG"/>
+        </div>   
+    <div class="content">
+        <H3 style="color:greenyellow">2. User defined Exceptions:-</H3>
+        <H3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In addition to the predefined exceptions, you can also define your own exceptions Unlike predefined exceptions, user-defined exceptions are declared and defined by the ser User-defined exceptions are declared in the declaration section of PL/SQL block with their type as EXCEPTION. They must be raised explicitly using the RA statement unlike pre defined exceptions that are raised implicitly
+        </H3>   
+    <H3 style="color:aqua">Steps to be followed to use User-defined Exceptions :-</H3>
+    <h3>(i)They should be explicitly declared in the Declaration section.<br>
+        (Declaring an Exception)<br><br>
+        (ii) They should be explicitly raised in the Execution section<br>     
+        (Raising an Exception)<br><br>
+        (iii) They should be handled by referencing the user-defined exception name in the Exception section.<br>
+        (Handling an Exception)
+    </h3>
+    <H3 style="color:aqua">{i}Declaring Exeptions</H3>
+    <h3>User-defined exceptions can be declared only in the declarative section of a PL/SQL block .</h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>IDENTIFIER EXCEPTIONS;</p>
+    </div>
+    <div class="content">
+        <H3 style="color:aqua">{ii}Raising an Exeptions</H3>
+    <h3>A user-defined exception is raised explicitly, by issuing the RAISE statement within the executable section of PL/SQL block </h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>RAISE exception-identifier;</p>
+    </div>
+    <div class="content">
+        <H3 style="color:aqua">{iii}Handling an Exeptions</H3>
+    <h3> Once a user-defined exception is raised in the executable section of PL/SQL block, then
+        it should be handled by referencing the user-defined exception name in the exception section </h3>
+    </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>Begin<br>
+            ...... <br>
+            . . . .<br>
+            EXCEPTION WHEN < EXCEPTION-IDENTIFIER >THEN<br> 
+             statement;</p>
+    </div>

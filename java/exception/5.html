@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../exception/exception.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Write a Java program that reads a file and throws an exception if the file is empty.</h1>
+          <h2>Code:-</h2>
+          <pre><br>             
+            // Write a Java program that reads a file and throws an exception if the file is empty.
+            import java.io.File;
+            import java.io.FileReader;
+            import java.io.IOException;
+            
+            class EmptyFileException extends Exception {
+                public EmptyFileException(String message) {
+                    super(message);
+                }
+            }
+            
+            class CheckEmptyFile {
+                public static void main(String[] args) {
+                    try {
+                        checkFileNotEmpty("data.txt");
+                    } catch (EmptyFileException e) {
+                        System.out.println("Empty file detected: " + e.getMessage());
+                    } catch (IOException e) {
+                        System.out.println("File not found or cannot be read: " + e.getMessage());
+                    }
+                }
+            
+                public static void checkFileNotEmpty(String fileName) throws IOException, EmptyFileException {
+                    File file = new File(fileName);
+            
+                    if (!file.exists() || file.length() == 0) {
+                        throw new EmptyFileException("File is empty or does not exist.");
+                    }
+            
+                    FileReader reader = new FileReader(file);
+                    reader.close();
+                }
+            }
+            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="5.png">
+</div>
+</section>

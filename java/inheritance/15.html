@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../inheritance/inheritance.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create an abstract class Animal with an abstract method called sound(). Create subclasses Lion and Tiger that extend the Animal class and implement the sound() method to make a specific sound for each animal.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            // Define the abstract class Animal
+            abstract class Animal {
+                abstract void sound(); // Abstract method for making a sound
+            }
+            
+            // Subclass Lion
+            class Lion extends Animal {
+                @Override
+                void sound() {
+                    System.out.println("The lion roars");
+                }
+            }
+            
+            // Subclass Tiger
+            class Tiger extends Animal {
+                @Override
+                void sound() {
+                    System.out.println("The tiger growls");
+                }
+            }
+            
+            // Main class to test the implementation
+             class inheritance15 {
+                public static void main(String[] args) {
+                    Animal lion = new Lion();
+                    Animal tiger = new Tiger();
+            
+                    lion.sound(); // Output: The lion roars
+                    tiger.sound(); // Output: The tiger growls
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="15.png">
+</div>
+</section>

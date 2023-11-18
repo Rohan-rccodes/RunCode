@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>FOREIGN KEY constraint</h1>
+   <h3>~To create a relationship between two tables, we primarily need two keys, one is the primary key, and the other is the foreign key.<br>
+    ~A primary key is a column or a group of columns that uniquely identifies a particular row in a table.<br>
+   <font color="yellow"> ~For example, the University roll number identifies each student's data uniquely. The primary key values cannot be null 
+    or have duplicates, and one table can have only one primary key. However, this one primary key in a table can consist of single or multiple columns.</font>
+      <br>~A foreign key is a column or a group of columns in a table whose values are referenced from a primary key in another table. A primary key in SQL uniquely identifies records in a table.
+ However, you must have a primary key for using a foreign key in SQL.<BR>
+    ~The foreign key is defined in the child table, and the table containing the referenced column is the parent table. The foreign key is defined using a combination of the following keywords:
+   </h3>
+  <H3><FONT COLOR="YELLOW">~FOREIGN KEY:</FONT> It is used to define the column in the child table at the table-level constraint.
+    <BR><FONT COLOR="YELLOW">~REFERENCES:</FONT> It identifies the parent table and primary key column in the parenttable.
+    <BR><FONT COLOR="YELLOW">~ON DELETE CASCADE: </FONT>It indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted.
+    <BR><FONT COLOR="YELLOW">~ON DELETE SET NULL:</FONT> It converts foreign key values to NULL when the parent value is removed.
+     <BR>The default behavior is called the Restrict rule, which disallows the update or deletion of referenced data. Without the ON DELETE CASCADE or the ON DELETE SET NULL options, the row in the parent table cannot be deleted if it is referenced in the child table</H3>
+</div>
+<div class="syntax">
+<h1>Syntax:-</h1>
+</div>
+<div class="box">
+    <p><b>CLC:-&nbsp;CREATE TABLE TABLE_NAME(COL1 DATATYPE REFERENCES PARENT_TABLE(COL_NAME),COL2 DATATYPE2,.......);<BR>
+          TCL:-&nbsp;CREATE TABLE TABLE_NAME(COL1 DATATYPE ,COL2 DATATYPE2,COL3 DATATYPE3,.......FOREIGN KEY REFERENCES   PARENT_TABLE(COL_NAME));</b></p>
+        </div>
+        <div class="content">
+            <H3><FONT COLOR="YELLOW">ON DELETE CASCADE</FONT>:-By using this option, whenever a parent row is deleted then all the corresponding child rows are deleted from the child table. This option is always used with the FOREIGN KEY.</H3>
+<H3><FONT COLOR="YELLOW">ON DELETE NULL</FONT>:- By using this option, all the foreign key column values set to NULL when the parent value is removed.</H3>
+
+        </div>
+<div class="pic_text">
+    <h1>Example:-</h1>
+</div>
+
+<div class="image">
+    <img src="../../sql/output/38.PNG"/>
+</div>                  
+              

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Write a Java program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a
+            {
+                public static void main(String arg[])throws java.io.IOException
+                {
+                    java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+                    int positive=0;
+                    int negative=0;
+                    int zeros=0;
+            
+                    Double num;
+                    String a="";
+                    System.out.println("Enter numbers, to quit enter q : ");
+                    while(true)
+                    {   try
+                       {
+                           a=input.readLine();
+                           num= Double.parseDouble(a); 
+                        }
+                        catch(java.lang.NumberFormatException e)
+                       {
+                           if(a.equals("q"))
+                           break;
+                           else continue;
+                       }
+                        if(num<0)
+                        negative ++;
+                        else if (num>0)
+                        positive++;
+                        else
+                        zeros++;
+                    }
+            
+                System.out.println("The number of positive number were "+positive);
+                System.out.println("The number of negative number were "+negative);
+                System.out.println("The number of zeros were "+zeros);
+            
+            
+            
+            
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/115.PNG">
+</div>
+</section>

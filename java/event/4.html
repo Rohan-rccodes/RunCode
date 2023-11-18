@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../event/event.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Java Program to Create 2 Radio Buttons and Display Selected Button Label</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            import javax.swing.*;
+            import java.awt.*;
+            import java.awt.event.*;
+            class Radio_Button implements ActionListener
+            {
+                static JRadioButton yes;
+                static JRadioButton no;
+                static JTextField text;
+                
+                public static void main(String args[])
+                {
+                    //Create a frame
+                    JFrame frame=new JFrame("Radio Button");
+                    frame.setSize(500,500);
+                    frame.setLayout(null);
+                    frame.setBackground(Color.white);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    
+                    text=new JTextField();
+                    text.setBounds(0,0,500,50);
+                    frame.add(text);
+                    
+                    yes=new JRadioButton("Yes");
+                    no=new JRadioButton("No");
+                    yes.setBounds(210,100,80,60);
+                    no.setBounds(210,200,80,60);
+                    frame.add(yes);
+                    frame.add(no);
+                    
+                    Radio_Button obj=new Radio_Button();
+                    
+                    yes.addActionListener(obj);
+                    no.addActionListener(obj);
+                    //Display the frame
+                    frame.setVisible(true);
+                }
+                
+                public void actionPerformed(ActionEvent e)
+                {
+                    String b=e.getActionCommand();		
+                    if(b.equals("Yes"))
+                    {
+                        if(no.isSelected())
+                            no.setSelected(false);
+                    }
+                    else
+                    {
+                        if(yes.isSelected())
+                            yes.setSelected(false);
+                    }
+                    text.setText("Label of Button Selected : "+b);
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="4.png">
+</div>
+</section>

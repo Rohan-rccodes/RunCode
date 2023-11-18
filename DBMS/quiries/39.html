@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="output_style.css" />
+<title>Website</title>
+<style>
+    .hero{
+        height: calc(1000vh - 80px);
+    }
+</style>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="html/html_index.html">HTML</a></li>
+                <li><a href="css/css_index.html">CSS</a></li>
+                <li><a href="html/html_index.html">DS</a></li>
+                <li><a href="../dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dbms_index.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>SQL OPERATORS</h1>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There are three types of operators used in SQL, namely Comparison Operators, Logical Operators and Special Operators. These operators are used mainly in the WHERE clause, HAVING clause to filter the data to be selected.</h3>
+<h3><font color="yellow">
+    <a href="#cp1">(1) Camparison Operators</a><br>
+    <a href="#cp2">(2) Logical Operators("OR","AND" & "NOT")</a><br>
+    <a href="#cp3">(3) Special Operators("LIKE","IN" & "BETWEEN"</a><br>
+</font><br><br>
+<h3 id="cp1"><font color="yellow">(1) Camparison Operators</font><br><br></h3>
+  <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Comparison operators are used to compare the column data with specific values in a condition. Comparison Operators are also used along with the SELECT statement to filter data based on specific conditions. The below table describes each comparison operator:
+</div>
+<div class="image">
+    <img src="../../sql/output/39.1.PNG"/>
+</div>
+<div class="content">                                                                                                 
+<h3 id="cp2"><font color="yellow">(2) Logical Operators</font></h3>
+    <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There are three Logical Operators namely, AND, OR, and NOT. These operators compare two or more than two conditions at a time to determine whether a row can be selected for the output. When retrieving data using a SELECT statement, you can use logical operators in the WHERE clause, which allows you to combine more than one conditions.</h3>
+</div>
+<div class="image">
+    <img src="../../sql/output/39.2.PNG"/>
+</div>      
+<div class="content">
+<h3 style="padding-bottom: 20px;"><font color="pink"><a id="lesson">(i) "OR" Logical Operator</a></font><br><br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If you want to select rows that satisfy at least one of the given conditions,you can use the logical operator,OR.
+</div>
+<div class="syntax">
+    <h1>Example:-</h1>
+    <h3 style="color:white;padding-top: 20px;"> To find the names of the student from the "student" table,who are of age 18 and 20,the query would be like:</h3>
+    </div>
+    <div class="box">
+        <p><b>select Name from student where age=18 or age=20;</b></p>
+    </div>
+<div class="image">
+    <img src="../../sql/output/39.3.PNG"/>
+</div>
+<div class="content">
+    <h3 style="padding-bottom: 20px;"><font color="pink">(ii) "AND" Logical Operator</font><br><br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If you want to select rows that satisfy all the given conditions,you can use the logical operator,AND.
+    </div>
+    <div class="syntax">
+        <h1>Example:-</h1>
+        <h3 style="color:white;padding-top: 20px;"> To find the names of the student from the "student" table,who are of age 18 and have marks greater than 80,the query would be like:</h3>
+        </div>
+        <div class="box">
+            <p><b>select Name from student where age=18 AND marks>80;</b></p>
+        </div>
+    <div class="image">
+        <img src="../../sql/output/39.4.PNG"/>
+    </div><div class="content">
+        <h3 style="padding-bottom: 20px;"><font color="pink">(iii) "NOT" Logical Operator</font><br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If you want to select rows that donot satisfy a conditions,you can use the logical operator,NOT. NOT results in the reverse of a condition.That is, if a conditon is satisfied, then the row is not returned.
+        </div>
+        <div class="syntax">
+            <h1>Example:-</h1>
+            <h3 style="color:white;padding-top: 20px;"> To find the names of the student from the "student" table,who are NOT of age 18,the query would be like:</h3>
+            </div>
+            <div class="box">
+                <p><b>select Name from student where age!=18;</b></p>
+            </div>
+        <div class="image">
+            <img src="../../sql/output/39.5.PNG"/>
+        </div>
+        <!-- jkjkjk -->
+        <div class="content">>
+        <h3 id="cp3"><font color="yellow">(3) Special Operators</font></h3>
+    <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There are some special operators available in SQL which are used to enhance the search capabilities
+        of a SQL query.They are "LIKE","IN" and "BETWEEN" operators.
+    </h3>
+</div>
+<div class="image">
+    <img src="../../sql/output/39.6.PNG"/>
+</div>      
+<div class="content">
+<h3 style="padding-bottom: 20px;"><font color="pink"><a id="lesson">(i) LIKE Operator(Matching a pattern from a table)</a></font><br><br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The LIKE operator is used to list all rows in a table whose column values match a specified pattern. It is useful when you want to search rows to match a specific pattern, or when you do not know the entire value. For this purpose, we use wildcard characters '%' and. Where '%' represents a sequence of zero or more characters and represents a single character. The LIKE operator is used only with CHAR and VARCHAR2 to match a pattern.   
+</div>
+<div class="syntax">
+    <h1>Example:-</h1>
+    <h3 style="color:white;padding-top: 20px;">To see the examples click on given questions:-</h3>
+    <h3 style="color:deeppink"><br>&nbsp; &nbsp;<a href="18.html" style="color:chartreuse;">1. Find out the record of student whose name is of length 4?</a>("_")
+                                <br> &nbsp; &nbsp;<a href="19.html" style="color:chartreuse;">2. Show all the records of the students whose name start with "a"?</a>("%")<br>
+                                     &nbsp; &nbsp;<a href="20.html" style="color:chartreuse;">3. Find the record of the students whose name is having second letter "A"?</a>("%")<br>
+                                     &nbsp; &nbsp;<a href="21.html" style="color:chartreuse;">4.Find the record of the student whose sname has alteast 4 characters?</a>("_" and "%")
+    </div>
+    
+<div class="content">
+    <h3><font color="pink">(ii) "IN" Operator</font><br><br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The IN operator is used to compare a column with more than one value.
+        It is similar to an OR conditon.</h3>
+    </div>
+    <div class="syntax">
+        <h1>Example:-</h1>
+        <h3 style="color:white;padding-top: 20px;"> To find the names of the student from the "student" table,who are of age 18 and 20,the query would be like:</h3>
+        </div>
+        <div class="box">
+            <p><b>select Name from student where age IN (18,20)</b></p>
+        </div>
+    <div class="image">
+        <img src="../../sql/output/39.7.PNG"/>
+    </div><div class="content">
+        <h3 style="padding-bottom: 20px;"><font color="pink">(iii) BETWEEN Operator </font><br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The BETWEEN operator is used to compare data for a range of values.</h3>
+        </div>
+        <div class="syntax">
+            <h1>Example:-</h1>
+            <h3 style="color:white;padding-top: 20px;"> To find the name and age of the student from the "student" table,whose marks are between 70 and 90,the query would be like:</h3>
+            </div>
+            <div class="box">
+                <p><b>select Name,age from student where marks between 70 AND 90;</b></p>
+            </div>
+        <div class="image">
+            <img src="../../sql/output/39.8.PNG"/>
+        </div>
+    

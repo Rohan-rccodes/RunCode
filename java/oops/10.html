@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../oops/oops.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+             
+//Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Student {
+    private String name;
+    private int grade;
+    private List<String> courses;
+
+    public Student(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+        this.courses = new ArrayList<String>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public List<String> getCourses() {
+        return courses;
+    }
+
+    public void addCourse(String courseName) {
+        courses.add(courseName);
+    }
+
+    public void removeCourse(String courseName) {
+        courses.remove(courseName);
+    }
+
+    public void displayStudentInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Grade: " + grade);
+        System.out.println("Courses: " + courses);
+    }
+}
+
+class StudentTest {
+    public static void main(String[] args) {
+        Student student1 = new Student("Bharat Bhatt",7101);
+
+        student1.addCourse("Maths");
+        student1.addCourse("Java");
+        student1.addCourse("PhP");
+
+        System.out.println("Student Information:");
+        student1.displayStudentInfo();
+
+        student1.removeCourse("Maths");
+
+        System.out.println("\nStudent Information after removing a course:");
+        student1.displayStudentInfo();
+    }
+}
+          </pre>
+          <h2>Output:-</h2>
+          <img src="10.png">
+</div>
+</section>

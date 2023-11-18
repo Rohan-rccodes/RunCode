@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../dataConversion/dataConversion.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>How to convert String to boolean</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            public class StringToBooleanExample {
+                public static void main(String[] args) {
+                    // Example: Convert String to boolean
+                    String strTrue = "true";
+                    String strFalse = "false";
+            
+                    // Method 1: Using Boolean.parseBoolean()
+                    boolean boolValue1True = Boolean.parseBoolean(strTrue);
+                    boolean boolValue1False = Boolean.parseBoolean(strFalse);
+            
+                    System.out.println("Method 1: Using Boolean.parseBoolean()");
+                    System.out.println("Converted boolean (true): " + boolValue1True);
+                    System.out.println("Converted boolean (false): " + boolValue1False);
+            
+                    // Method 2: Using Boolean.valueOf()
+                    boolean boolValue2True = Boolean.valueOf(strTrue);
+                    boolean boolValue2False = Boolean.valueOf(strFalse);
+            
+                    System.out.println("\nMethod 2: Using Boolean.valueOf()");
+                    System.out.println("Converted boolean (true): " + boolValue2True);
+                    System.out.println("Converted boolean (false): " + boolValue2False);
+                }
+            }            
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/21.PNG">
+</div>
+</section>

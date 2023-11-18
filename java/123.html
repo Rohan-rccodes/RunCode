@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Write a Java method to count all vowels in a string</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            /*Count all the vowels in a string */
+            class String123 {
+                   public static void main(String[] args) {
+                    String inputString = "Hello, this is java programming.";
+                    System.out.println("Input String: " + inputString);
+                    
+                    int vowelCount = countAllVowels(inputString);
+                    System.out.println("Number of vowels in the string: " + vowelCount);
+                }
+            
+                public static int countAllVowels(String str) {
+                    int count = 0;
+                    // Convert the input string to lowercase to make the comparison case-insensitive
+                    str = str.toLowerCase();
+            
+                    for (int i = 0; i < str.length(); i++) {
+                        char ch = str.charAt(i);
+                        // Check if the character is a vowel ('a', 'e', 'i', 'o', 'u' - both lowercase and uppercase)
+                        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                            count++;
+                        }
+                    }
+                    return count;
+                }
+            }
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/123.PNG">
+</div>
+</section>

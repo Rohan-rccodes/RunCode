@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device=width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"  href="plsl_style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../html/html_index.html">HTML</a></li>
+                <li><a href="../../css/css_index.html">CSS</a></li>
+                <li><a href="../../html/html_index.html">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../plsql.html" class="previous">&laquo; Previous</a>
+        </div>
+<div class="content">
+<h1>FUNCTION</h1>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A function is a named PL/SQL block like procedure that can accept parameters and be invoked. Generally speaking, a function is mainly used to compute a value. Functions and procedures have a similar structure, except that the functions have a RETURN clause, i.e. a function must return a value to the calling environment.
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like a procedure, a function has a header, a declarative section, an executable section, and an optional exception-handling section. A function must have a RETURN clause in the header section and at least one RETURN statement in the executable section.
+    
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Functions can be stored in the database as a schema object for repeated execution. A function stored in the database is referred to as a stored function.
+    
+    <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Functions promote reusability and maintainability. When validated they can be used in any number of applications. If the processing requirements change, only the function needs to be updated.
+    
+    <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can create a new function with the CREATE FUNCTION statement, which may declare a list of parameters, must return one value, and must define the actions to be performed by the standard PL/SQL block.
+ </div>
+    <div class="syntax">
+    <h1>Syntax:-</h1>
+    </div>
+    <div class="box">
+        <p><b>
+            CREATE [OR REPLACE] FUNCTION function_name [parameters]<BR>
+[(parameter_name [modes] datatype [, ...])]<BR>
+RETURN return_datatype<BR>
+IS / AS<BR>
+BEGIN<BR>
+function_body statements;<BR>
+END [function_name];<BR>
+Calling a Function<BR>
+function_name(parameters..);
+</b></p>    </div>
+<div class="content">
+    <H3 style="color:yellow">Creation and execution of function:-</H3>
+    </div>
+            <div class="image">
+                <img src="../output/25.PNG"/>
+            </div>
+            <div class="content">
+            <H3 style="color:yellow">TYPES OF FUNCTION:-</H3>
+        <h3>1.Named<br>
+    2. Stored.</h3>
+        </div>
+        <div class="content">
+            <H3 style="color:yellow">MODES OF PARAMETERS:-</H3>
+        <h3>1. IN(DEFAULT)<br>
+        2. OUT<br>
+    3. IN OUT</h3>
+    <H3 style="color:coral">1.IN MODE</H3>
+    <H3>The IN parameter can be referenced by the procedure or function. The value of the parameter cannot be overwritten by the procedure or the function.</H3>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+    <div class="box">
+        <p><b>create or replace function func1(x number,y number)<br>
+            return number is<br>
+            r number;<br>
+            begin>br>
+            r:=x+y;<br>
+            return(r);<br>
+            end;<br>
+            /<br>
+            declare<br> 
+            n1 number:=10;<br>
+            n2 number:=20;<br>
+            s number;<br>
+            begin<br>
+            s:=func1(n1,n2);<br>
+            dbms_output.put_line('result is : '||s);<br>
+            end;<br></b></p>
+    </div>
+    <div class="syntax">
+        <h1>output:-</h1>
+        </div>
+    <div class="image">
+        <img src="../output/25.PNG"/>
+    </div>
+    <div class="content">
+    <H3 style="color:coral">2.OUT MODE</H3>
+    <H3>The OUT parameter cannot be referenced by the procedure or function, but the value of the parameter can be overwritten by the procedure or function.</H3>
+    </div>
+    <div class="syntax">
+        <h1>Examples:-</h1>
+        </div>
+    <div class="box">
+    <p><B>create or replace function func2(y out number)<br>
+        return number is<br>
+        r number:=10;<br>
+        s number:=23;<br>    
+        begin<br>
+        y:=r+s;<br>
+        return(r*s);<br>
+        end;<br>
+        /<br>
+        declare<br> 
+        n1 number;<br>
+        n2 number;<br>
+        begin<br>
+        n1:=func2(n1,n2);<br>
+        dbms_output.put_line('Multiplication result is : '||n1);<br>
+        dbms_output.put_line('addition result is : '||n2);<br>
+        end;<br></B></p></div>
+    <div class="syntax">
+        <h1>output:-</h1>
+        </div>
+    <div class="image">
+        <img src="../output/25.1.PNG"/>
+    </div>
+    <div class="content">
+        <H3 style="color:coral">3. IN OUT MODE</H3>
+        <H3>The INOUT parameter can be referenced by the procedure or function and the value of the parameter can be overwritten by the procedure or function.</H3>
+        </div>
+    <div class="content">
+<H3 style="color:coral">DROPPING A function:-</H3>
+<H3>To drop a function ,DROP FUNCTION statement is used .In order to drop a function,one must either own the function or have DROP ANY FUNCTION system privilege.</H3>
+</div><div class="syntax">
+<h1>syntax:-</h1>
+</div>
+<div class="box">
+<p><B>DROP FUNCTION function_name;
+</B></P></div>
+<div class="syntax">
+    <h1>Example:-</h1>
+    </div>
+    <div class="box">
+    <p><B>DROP function func1;
+    </B></P></div>
+    <div class="image">
+        <img src="../output/25.2.PNG"/>
+    </div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../php/php.htm">PHP</a></li>
+                <li><a href="../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../about us/About.html">About</a> </li>
+        <li><a href="../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../java/java.html" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1>Write a Java program to reverse an array of integer values</h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a
+            {  
+              public static void main(String[] args) {  
+                    
+                  int [] arr = new int [] {1, 2, 3, 4, 5};  
+                  System.out.println("Original array: ");  
+                  for (int i = 0; i < arr.length; i++) {  
+                      System.out.print(arr[i] + " ");  
+                  }  
+                  System.out.println();  
+                  System.out.println("Array in reverse order: ");  
+                  
+                  for (int i = arr.length-1; i >= 0; i--) {  
+                      System.out.print(arr[i] + " ");  
+                  }  
+              }  
+          }  
+          </pre>
+          <h2>Output:-</h2>
+          <img src="pic/88.PNG">
+</div>
+</section>

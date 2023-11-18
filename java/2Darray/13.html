@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="../java-style.css" />
+<title>Website</title>
+</head>
+<body>
+<div class="menu">
+    <h1 class="logo">Rana<span>Code</span>Runner.</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+            <a href="#">Menu <i class="fas fa-caret-down"></i> </a> 
+            <div class="dropdown">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">DS</a></li>
+                <li><a href="../../DBMS/dbms_topic.html">DBMS</a></li>
+                <li><a href="../../php/php.htm">PHP</a></li>
+                <li><a href="../../java/java-topics.html">JAVA</a></li>
+            </ul>
+            </div>
+        </li>
+        <li><a href="../../about us/About.html">About</a> </li>
+        <li><a href="../../content/Content.html">Contact us</a> </li>
+    </ul>
+</div>
+                <!-- for previous button -->
+<section class="hero">
+    &nbsp;
+    <div class="container">
+        <a href="../2Darray/2Darray.htm" class="previous">&laquo; Previous</a>
+        </div>
+               <!-- making output -->
+<div class="content">
+          <h1> Program to determine whether a given matrix is a sparse matrix </h1>
+          <h2>Code:-</h2>
+          <pre><br>
+            class a   
+            {    
+                public static void main(String[] args) {    
+                    int rows, cols, size, count = 0;    
+                        
+                    //Initialize matrix a    
+                    int a[][] = {       
+                                    {4, 0, 0},    
+                                    {0, 5, 0},    
+                                    {0, 0, 6}    
+                                };    
+                          
+                      //Calculates number of rows and columns present in given matrix    
+                      rows = a.length;    
+                    cols = a[0].length;    
+                        
+                    //Calculates the size of array    
+                    size = rows * cols;    
+                        
+                    //Count all zero element present in matrix    
+                    for(int i = 0; i < rows; i++){    
+                        for(int j = 0; j < cols; j++){    
+                            if(a[i][j] == 0)    
+                                count++;    
+                            }    
+                        }    
+                            
+                    if(count > (size/2))    
+                        System.out.println("Given matrix is a sparse matrix");    
+                    else    
+                        System.out.println("Given matrix is not a sparse matrix");    
+                }    
+            }     
+          </pre>
+          <h2>Output:-</h2>
+          <img src="13.PNG">
+</div>
+</section>
